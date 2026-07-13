@@ -101,7 +101,7 @@ export default function Navbar() {
         {/* Damilare badge */}
         <div className="hidden lg:flex items-center gap-2 text-[11px] font-mono text-slate-600 border border-blue-900/30 rounded-full px-3 py-1.5 flex-shrink-0">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block" />
-          Damilare Akossou
+          Abigael Akossou
         </div>
 
         {/* Mobile menu button */}
