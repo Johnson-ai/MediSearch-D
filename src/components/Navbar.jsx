@@ -63,7 +63,7 @@ export default function Navbar() {
             <div className="flex items-center gap-1">
               <span className="font-display font-bold text-white text-base tracking-tight">Medi</span>
               <span className="font-display font-bold text-blue-400 text-base tracking-tight">Search</span>
-              <span className="ml-1 text-[10px] text-blue-500 font-mono border border-blue-800 rounded px-1 py-px">AI</span>
+              <span className="ml-1 text-[10px] text-blue-500 font-mono border border-blue-800 rounded px-1 py-px">D</span>
             </div>
           </div>
         </Link>

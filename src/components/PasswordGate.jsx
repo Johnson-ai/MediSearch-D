@@ -53,7 +53,7 @@ export default function PasswordGate({ children }) {
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="font-display font-bold text-white text-2xl">Medi</span>
             <span className="font-display font-bold text-blue-400 text-2xl">Search</span>
-            <span className="ml-1 text-[11px] text-blue-500 font-mono border border-blue-800 rounded px-1.5 py-0.5">D</span>
+            <span className="ml-1 text-[11px] text-blue-500 font-mono border border-blue-800 rounded px-1.5 py-0.5">AI</span>
           </div>
           <p className="text-slate-600 text-xs font-mono">Clinical Intelligence · Restricted Access</p>
         </div>

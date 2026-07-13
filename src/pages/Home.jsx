@@ -39,7 +39,7 @@ export default function Home() {
               <div className="w-px h-8 bg-blue-800" />
               <div>
                 <div className="text-xs text-slate-500 font-mono uppercase tracking-widest">Prepared for</div>
-                <div className="text-sm text-white font-display font-semibold">Damilare Akossou</div>
+                <div className="text-sm text-white font-display font-semibold">Abigael Akossou</div>
                 <div className="text-[11px] text-slate-600 font-mono">Nursing Final Year · 2026</div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
                   <div className="font-mono text-blue-600 text-[10px] uppercase tracking-widest mb-0.5">{CLINICAL_CATEGORIES.find(c => c.id === activeCategory)?.short}</div>
                   <div className="text-white font-semibold text-sm">{CLINICAL_CATEGORIES.find(c => c.id === activeCategory)?.label}</div>
                 </div>
-                <div className="text-[10px] font-mono text-slate-700">MediSearch AI · Evidence-based</div>
+                <div className="text-[10px] font-mono text-slate-700">MediSearch · Evidence-based</div>
               </div>
               <div className="p-6"><ResultRenderer text={results} /></div>
             </div>

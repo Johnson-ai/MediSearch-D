@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="font-display font-bold text-blue-400">Search</span>
               <span className="ml-1 text-[10px] font-mono text-blue-600 border border-blue-900 rounded px-1">AI</span>
             </div>
-            <p className="text-[11px] text-slate-600 font-mono mb-1">Prepared for <span className="text-slate-400">Damilare Akossou</span></p>
+            <p className="text-[11px] text-slate-600 font-mono mb-1">Prepared for <span className="text-slate-400">Abigael Akossou</span></p>
             <p className="text-[11px] text-slate-700 font-mono">Nursing Final Year · 2026</p>
           </div>
 
