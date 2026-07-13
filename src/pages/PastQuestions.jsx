@@ -63,7 +63,7 @@ export default function PastQuestions() {
             Nigerian Nursing<br /><span className="text-blue-400 text-glow">Board Questions</span>
           </h1>
           <p className="text-slate-500 text-sm max-w-lg leading-relaxed">
-            Past examination questions from the Nursing and Midwifery Council of Nigeria (NMCN). Compiled for Damilare Akossou — Final Year 2026.
+            Past examination questions from the Nursing and Midwifery Council of Nigeria (NMCN). Compiled for Abigael Akossou — Final Year 2026.
           </p>
 
           {/* Stats row */}
