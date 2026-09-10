@@ -1044,6 +1044,888 @@ export const PAST_QUESTIONS = [
     answer: "C",
     explanation: "An ineffective cough impairs secretion clearance, increasing the risk of airway obstruction and alveolar collapse (atelectasis)."
   },
+
+  // ─── HEAD-TO-TOE BODY SYSTEMS EXPANSION ───────────────────────────────────
+{
+    id: 129, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A nurse is assessing a client for signs of increased intracranial pressure (ICP). Which of the following is typically the EARLIEST indicator?",
+    options: ["A. Widened pulse pressure", "B. Decreased level of consciousness", "C. Bradycardia", "D. Fixed, dilated pupils"],
+    answer: "B",
+    explanation: "A change in level of consciousness (LOC), such as restlessness, confusion, or lethargy, is the earliest and most sensitive indicator of increasing ICP — it precedes vital sign changes like Cushing's triad (widened pulse pressure, bradycardia) and pupillary changes, which are late signs."
+  },
+  {
+    id: 130, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client with a spinal cord injury at T4 suddenly develops a pounding headache, profuse sweating above the injury level, and a blood pressure of 210/120 mmHg. The nurse should suspect:",
+    options: ["A. Spinal shock", "B. Autonomic dysreflexia", "C. Neurogenic shock", "D. Increased intracranial pressure"],
+    answer: "B",
+    explanation: "Autonomic dysreflexia is a life-threatening emergency in clients with spinal cord injury at T6 or above, triggered by a noxious stimulus below the injury (often a distended bladder or bowel). It causes severe hypertension, pounding headache, and profuse sweating above the lesion. The nurse must sit the client upright and identify the trigger immediately."
+  },
+  {
+    id: 131, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "The FIRST nursing action for a client with suspected autonomic dysreflexia is to:",
+    options: ["A. Administer antihypertensive medication.", "B. Place the client flat in bed.", "C. Sit the client up and check for bladder distension.", "D. Call a code blue immediately."],
+    answer: "C",
+    explanation: "Sitting the client upright helps lower blood pressure through orthostatic effect, and the most common trigger — a distended bladder — should be checked and relieved first (e.g., checking for a kinked catheter) before other interventions."
+  },
+  {
+    id: 132, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is diagnosed with Guillain-Barré syndrome. The nurse should prioritize monitoring for which complication?",
+    options: ["A. Hypertension", "B. Ascending paralysis leading to respiratory failure", "C. Seizures", "D. Increased intracranial pressure"],
+    answer: "B",
+    explanation: "Guillain-Barré syndrome causes ascending, symmetrical muscle weakness that can progress rapidly to the respiratory muscles, leading to respiratory failure. Close monitoring of respiratory status (vital capacity, negative inspiratory force) is the nursing priority."
+  },
+  {
+    id: 133, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client with myasthenia gravis is scheduled to receive pyridostigmine (Mestinon). The nurse should administer this medication:",
+    options: ["A. With food to reduce GI upset only.", "B. On an empty stomach for best absorption.", "C. 30 minutes before meals to improve chewing and swallowing.", "D. At bedtime only."],
+    answer: "C",
+    explanation: "Pyridostigmine improves muscle strength, including the muscles used for chewing and swallowing. Administering it 30 minutes before meals ensures peak effectiveness during eating, reducing the risk of aspiration and fatigue."
+  },
+  {
+    id: 134, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client experiencing a myasthenic crisis and one experiencing a cholinergic crisis both present with worsening muscle weakness. Which finding helps the nurse distinguish a cholinergic crisis?",
+    options: ["A. Ptosis", "B. Excessive salivation, cramping, and diarrhea", "C. Diplopia", "D. Dysphagia"],
+    answer: "B",
+    explanation: "Cholinergic crisis results from excessive acetylcholinesterase inhibitor medication and produces cholinergic (SLUDGE) symptoms: salivation, lacrimation, urination, diarrhea, GI cramping, and emesis, in addition to muscle weakness — differentiating it from myasthenic crisis, which lacks these autonomic symptoms."
+  },
+  {
+    id: 135, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is admitted following a traumatic brain injury. The nurse notes clear fluid draining from the nose. The nurse should:",
+    options: ["A. Instruct the client to blow the nose gently to clear the drainage.", "B. Test the drainage for glucose using a dipstick.", "C. Pack the nostril with sterile gauze.", "D. Position the client supine with the head flat."],
+    answer: "B",
+    explanation: "Clear drainage from the nose or ears after head trauma may indicate cerebrospinal fluid (CSF) leakage. Testing for glucose (CSF is glucose-positive, unlike normal nasal mucus) helps confirm this. Nose blowing, packing, and flat positioning are contraindicated as they risk infection or increased ICP."
+  },
+  {
+    id: 136, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is diagnosed with a stroke affecting the left hemisphere of the brain. The nurse would expect which of the following clinical manifestations?",
+    options: ["A. Left-sided weakness and impulsive behavior", "B. Right-sided weakness and language deficits", "C. Left-sided neglect", "D. Bilateral hyperreflexia"],
+    answer: "B",
+    explanation: "Because motor and sensory pathways cross at the level of the brainstem, a left hemisphere stroke produces right-sided weakness. The left hemisphere is also typically dominant for language in most people, so aphasia (language deficits) is a common finding."
+  },
+  {
+    id: 137, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is receiving tissue plasminogen activator (tPA) for an acute ischemic stroke. Which finding requires the nurse to stop the infusion immediately?",
+    options: ["A. Mild headache", "B. Sudden severe headache and decreased LOC", "C. Elevated blood pressure of 150/90 mmHg", "D. Nausea"],
+    answer: "B",
+    explanation: "A sudden severe headache with decreased level of consciousness during tPA infusion suggests intracranial hemorrhage, the most feared complication of thrombolytic therapy. The infusion must be stopped immediately and a stat CT scan obtained."
+  },
+  {
+    id: 138, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client with Parkinson's disease is prescribed levodopa-carbidopa (Sinemet). The nurse should instruct the client to avoid taking this medication with which of the following?",
+    options: ["A. High-carbohydrate foods", "B. High-protein foods", "C. High-fat foods", "D. Foods high in vitamin C"],
+    answer: "B",
+    explanation: "High-protein meals can compete with levodopa for absorption across the blood-brain barrier and reduce its effectiveness. Clients are usually taught to take the medication apart from protein-rich meals."
+  },
+  {
+    id: 139, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "The nurse is caring for a client with a new diagnosis of Bell's palsy. Which of the following should be included in client teaching?",
+    options: ["A. Protect the affected eye from injury and dryness.", "B. The condition is permanent and will not resolve.", "C. Avoid all facial exercises.", "D. Surgery is the primary treatment."],
+    answer: "A",
+    explanation: "Bell's palsy causes facial nerve paralysis, often impairing the ability to fully close the eyelid on the affected side. Protecting the eye with lubricating drops, a patch, or taping it closed at night prevents corneal injury and dryness. Most cases resolve spontaneously within weeks to months."
+  },
+  {
+    id: 140, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is admitted with a diagnosis of meningitis. Which assessment finding is consistent with meningeal irritation?",
+    options: ["A. Positive Homan's sign", "B. Positive Kernig's sign", "C. Negative Babinski reflex", "D. Absent patellar reflex"],
+    answer: "B",
+    explanation: "Kernig's sign — pain and resistance when extending the knee with the hip flexed at 90 degrees — indicates meningeal irritation, along with Brudzinski's sign (neck flexion causing hip/knee flexion) and nuchal rigidity."
+  },
+  {
+    id: 141, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is prescribed phenytoin (Dilantin) for seizure management. The nurse should monitor for which adverse effect with long-term use?",
+    options: ["A. Weight loss", "B. Gingival hyperplasia", "C. Hyperactivity", "D. Improved night vision"],
+    answer: "B",
+    explanation: "Gingival hyperplasia (overgrowth of gum tissue) is a well-known long-term adverse effect of phenytoin. Clients should be taught meticulous oral hygiene and regular dental visits to manage this."
+  },
+  {
+    id: 142, subject: "Medical-Surgical Nursing", topic: "Neurological",
+    year: "NMCN Review",
+    question: "A client is having a generalized tonic-clonic seizure. The PRIORITY nursing action is to:",
+    options: ["A. Restrain the client's movements.", "B. Insert a padded tongue blade into the mouth.", "C. Protect the client from injury and turn them to the side.", "D. Administer oral anticonvulsant medication."],
+    answer: "C",
+    explanation: "During a seizure, the priority is protecting the client from injury (padding/removing hazards) and positioning them on their side to maintain a patent airway and prevent aspiration. Restraining the client or inserting objects into the mouth can cause injury and are contraindicated."
+  },
+  {
+    id: 143, subject: "Anatomy & Physiology", topic: "Neurological",
+    year: "NMCN Review",
+    question: "Which cranial nerve is responsible for the sense of smell?",
+    options: ["A. Cranial nerve I (Olfactory)", "B. Cranial nerve II (Optic)", "C. Cranial nerve V (Trigeminal)", "D. Cranial nerve VII (Facial)"],
+    answer: "A",
+    explanation: "The olfactory nerve (CN I) transmits sensory information related to smell from the nasal mucosa to the olfactory bulb and brain."
+  },
+  {
+    id: 144, subject: "Anatomy & Physiology", topic: "Neurological",
+    year: "NMCN Review",
+    question: "The part of the brain responsible for coordinating voluntary movement, balance, and posture is the:",
+    options: ["A. Cerebrum", "B. Cerebellum", "C. Medulla oblongata", "D. Thalamus"],
+    answer: "B",
+    explanation: "The cerebellum coordinates voluntary muscle movements, balance, and posture. Damage to the cerebellum (e.g., from stroke or tumor) commonly causes ataxia and impaired coordination."
+  },
+  {
+    id: 145, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "A client is diagnosed with acute angle-closure glaucoma. Which of the following symptoms would the nurse expect?",
+    options: ["A. Gradual, painless vision loss", "B. Sudden severe eye pain, halos around lights, and nausea", "C. Excessive tearing without pain", "D. Painless floaters"],
+    answer: "B",
+    explanation: "Acute angle-closure glaucoma is an ophthalmic emergency presenting with sudden severe eye pain, blurred vision, halos around lights, nausea, and vomiting due to a rapid rise in intraocular pressure. It requires immediate treatment to prevent permanent vision loss."
+  },
+  {
+    id: 146, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "A client with open-angle glaucoma is prescribed timolol (Timoptic) eye drops. The nurse should teach the client to apply pressure to the inner canthus (nasolacrimal duct) after instillation to:",
+    options: ["A. Reduce burning sensation.", "B. Prevent systemic absorption and side effects.", "C. Improve the drug's local effect on the cornea.", "D. Prevent the drop from evaporating too quickly."],
+    answer: "B",
+    explanation: "Applying gentle pressure to the nasolacrimal duct (punctal occlusion) for 30-60 seconds after eye drop instillation prevents the medication from draining into the nasal passage and being absorbed systemically, which is important for beta-blocker eye drops like timolol that can cause systemic cardiac and respiratory effects."
+  },
+  {
+    id: 147, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "A client returns from cataract surgery. Which instruction should the nurse include in discharge teaching?",
+    options: ["A. Sleep on the operative side.", "B. Avoid bending at the waist and heavy lifting.", "C. Resume strenuous exercise immediately.", "D. Rub the eye if it feels itchy."],
+    answer: "B",
+    explanation: "After cataract surgery, clients should avoid activities that increase intraocular pressure, such as bending at the waist, heavy lifting, straining, and rubbing the eye, to protect the surgical site and prevent complications."
+  },
+  {
+    id: 148, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "A client reports sudden hearing loss, tinnitus, and vertigo. The nurse suspects which condition?",
+    options: ["A. Otitis media", "B. Ménière's disease", "C. Presbycusis", "D. Otosclerosis"],
+    answer: "B",
+    explanation: "Ménière's disease is characterized by the classic triad of episodic vertigo, tinnitus, and fluctuating sensorineural hearing loss, caused by excess fluid (endolymph) in the inner ear."
+  },
+  {
+    id: 149, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "The nurse is caring for a client following a total laryngectomy. Priority discharge teaching should include:",
+    options: ["A. Swimming is permitted with a snorkel.", "B. The client will breathe through a permanent stoma in the neck.", "C. The client can resume smoking after healing.", "D. Humidification of air is unnecessary."],
+    answer: "B",
+    explanation: "A total laryngectomy results in a permanent tracheostoma, as the trachea is no longer connected to the nose and mouth. The client breathes entirely through this stoma, requiring extensive education on stoma care, humidification, and protection from water."
+  },
+  {
+    id: 150, subject: "Medical-Surgical Nursing", topic: "HEENT",
+    year: "NMCN Review",
+    question: "A client is diagnosed with epistaxis (nosebleed) that is not resolving with direct pressure. The nurse should position the client:",
+    options: ["A. Supine with the neck extended.", "B. Sitting upright, leaning slightly forward, pinching the soft part of the nose.", "C. Lying on the back with the head elevated on two pillows.", "D. Trendelenburg position."],
+    answer: "B",
+    explanation: "For epistaxis, the client should sit upright and lean slightly forward while pinching the soft, lower part of the nose for 10-15 minutes continuously. This position prevents blood from draining down the throat (which can cause aspiration or nausea) and allows direct pressure to control bleeding."
+  },
+  {
+    id: 151, subject: "Anatomy & Physiology", topic: "HEENT",
+    year: "NMCN Review",
+    question: "The structure in the ear responsible for maintaining balance and equilibrium is the:",
+    options: ["A. Cochlea", "B. Tympanic membrane", "C. Semicircular canals", "D. Eustachian tube"],
+    answer: "C",
+    explanation: "The semicircular canals in the inner ear detect rotational movement of the head and are essential for maintaining balance and equilibrium. The cochlea, by contrast, is responsible for hearing."
+  },
+  {
+    id: 152, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with heart failure is prescribed digoxin and furosemide. Which laboratory value increases the client's risk for digoxin toxicity?",
+    options: ["A. Serum sodium 140 mEq/L", "B. Serum potassium 3.0 mEq/L", "C. Serum calcium 9.5 mg/dL", "D. Serum glucose 100 mg/dL"],
+    answer: "B",
+    explanation: "Furosemide is a potassium-wasting diuretic. Hypokalemia (potassium 3.0 mEq/L, below the normal 3.5-5.0 mEq/L) increases myocardial sensitivity to digoxin, significantly raising the risk of digoxin toxicity and dangerous arrhythmias."
+  },
+  {
+    id: 153, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client presents with crushing substernal chest pain radiating to the left arm, diaphoresis, and nausea. The nurse's PRIORITY action is to:",
+    options: ["A. Obtain a detailed medical history.", "B. Administer aspirin and obtain a 12-lead ECG.", "C. Prepare the client for discharge if pain subsides.", "D. Encourage ambulation to assess exercise tolerance."],
+    answer: "B",
+    explanation: "For suspected acute myocardial infarction, the priority is rapid assessment and treatment: obtaining a 12-lead ECG within 10 minutes and administering aspirin (unless contraindicated) to reduce platelet aggregation, following the 'MONA' framework (Morphine, Oxygen, Nitrates, Aspirin) as appropriate."
+  },
+  {
+    id: 154, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with atrial fibrillation is prescribed warfarin (Coumadin). The nurse should monitor which laboratory value to assess therapeutic effect?",
+    options: ["A. Partial thromboplastin time (PTT)", "B. International Normalized Ratio (INR)", "C. Platelet count", "D. Hemoglobin A1c"],
+    answer: "B",
+    explanation: "Warfarin therapy is monitored using the INR, with a therapeutic range typically between 2.0 and 3.0 for most indications (including atrial fibrillation), to balance anticoagulation and bleeding risk. PTT is used to monitor heparin, not warfarin."
+  },
+  {
+    id: 155, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A nurse is caring for a client following cardiac catheterization via the right femoral artery. Which assessment finding requires IMMEDIATE intervention?",
+    options: ["A. Slight bruising at the insertion site", "B. Expanding hematoma and decreased pedal pulse in the right leg", "C. Client reports mild soreness at the site", "D. Heart rate of 78 beats/minute"],
+    answer: "B",
+    explanation: "An expanding hematoma with decreased pedal pulse suggests active bleeding and vascular compromise distal to the insertion site — a potentially limb-threatening complication requiring immediate pressure application and physician notification."
+  },
+  {
+    id: 156, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is diagnosed with left-sided heart failure. Which of the following clinical manifestations would the nurse expect?",
+    options: ["A. Peripheral edema and jugular vein distension", "B. Pulmonary crackles and dyspnea", "C. Ascites and hepatomegaly", "D. Weight gain from fluid retention in the extremities only"],
+    answer: "B",
+    explanation: "Left-sided heart failure causes blood to back up into the pulmonary circulation, resulting in pulmonary congestion — manifesting as crackles, dyspnea, and orthopnea. Peripheral edema, JVD, ascites, and hepatomegaly are signs of right-sided heart failure."
+  },
+  {
+    id: 157, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A nurse notes that a client's cardiac monitor shows a wide, bizarre QRS complex occurring at a rate of 160 beats/minute with no discernible P waves. The nurse recognizes this rhythm as:",
+    options: ["A. Atrial fibrillation", "B. Ventricular tachycardia", "C. Sinus tachycardia", "D. First-degree AV block"],
+    answer: "B",
+    explanation: "Ventricular tachycardia is characterized by wide, bizarre QRS complexes at a rate typically 100-250 beats/minute, with absent P waves, originating from an ectopic focus in the ventricles. It is a life-threatening rhythm requiring immediate intervention."
+  },
+  {
+    id: 158, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client's cardiac monitor shows ventricular fibrillation. The nurse's FIRST action should be to:",
+    options: ["A. Check the client's blood pressure.", "B. Assess responsiveness and call for help/initiate CPR and defibrillation.", "C. Administer amiodarone IV push.", "D. Document the rhythm and continue routine monitoring."],
+    answer: "B",
+    explanation: "Ventricular fibrillation is a pulseless, life-threatening rhythm. The nurse should immediately assess responsiveness, call for help/activate the emergency response system, and begin CPR with defibrillation as soon as possible, per ACLS protocol."
+  },
+  {
+    id: 159, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with hypertension is prescribed lisinopril (an ACE inhibitor). The nurse should instruct the client to report which of the following side effects?",
+    options: ["A. Occasional mild headache", "B. Persistent dry cough", "C. Increased appetite", "D. Improved energy levels"],
+    answer: "B",
+    explanation: "A persistent dry, nonproductive cough is a well-known side effect of ACE inhibitors, caused by increased bradykinin levels. If bothersome, the physician may switch the client to an angiotensin receptor blocker (ARB), which does not typically cause this effect."
+  },
+  {
+    id: 160, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with deep vein thrombosis (DVT) in the left leg is on bed rest. Which nursing action is contraindicated?",
+    options: ["A. Elevating the affected leg.", "B. Applying prescribed anticoagulant therapy.", "C. Massaging the affected leg to relieve discomfort.", "D. Measuring leg circumference daily."],
+    answer: "C",
+    explanation: "Massaging the affected leg in a client with DVT is contraindicated because it can dislodge the clot, causing a pulmonary embolism. The leg should be elevated and left undisturbed, with anticoagulation as prescribed."
+  },
+  {
+    id: 161, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A nurse is caring for a client with peripheral arterial disease (PAD). Which finding is consistent with this condition?",
+    options: ["A. Warm skin with brawny discoloration", "B. Pain that improves with leg elevation", "C. Cool skin, diminished pulses, and pain that worsens with elevation", "D. Pitting edema and stasis dermatitis"],
+    answer: "C",
+    explanation: "PAD results from reduced arterial blood flow, causing cool skin, diminished or absent pulses, and pain (intermittent claudication or rest pain) that worsens with leg elevation (which further reduces arterial flow) and improves when the leg is in a dependent position."
+  },
+  {
+    id: 162, subject: "Anatomy & Physiology", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "The normal intrinsic pacemaker of the heart, which initiates each heartbeat, is the:",
+    options: ["A. Atrioventricular (AV) node", "B. Sinoatrial (SA) node", "C. Bundle of His", "D. Purkinje fibers"],
+    answer: "B",
+    explanation: "The sinoatrial (SA) node, located in the right atrium, is the heart's natural pacemaker, generating electrical impulses at 60-100 beats/minute that initiate each normal heartbeat."
+  },
+  {
+    id: 163, subject: "Anatomy & Physiology", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "Which heart valve is located between the left atrium and left ventricle?",
+    options: ["A. Tricuspid valve", "B. Pulmonic valve", "C. Mitral (bicuspid) valve", "D. Aortic valve"],
+    answer: "C",
+    explanation: "The mitral valve (also called the bicuspid valve) is located between the left atrium and left ventricle, preventing backflow of oxygenated blood into the atrium during ventricular contraction."
+  },
+  {
+    id: 164, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is receiving IV heparin therapy. The antidote for heparin overdose is:",
+    options: ["A. Vitamin K", "B. Protamine sulfate", "C. Fresh frozen plasma only", "D. Calcium gluconate"],
+    answer: "B",
+    explanation: "Protamine sulfate is the specific antidote for heparin, neutralizing its anticoagulant effect by binding to it. Vitamin K is the antidote for warfarin, not heparin."
+  },
+  {
+    id: 165, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with a permanent pacemaker should be taught to avoid which of the following?",
+    options: ["A. Using a microwave oven.", "B. Standing close to strong magnetic fields such as MRI machines without physician clearance.", "C. Using a cellphone at all times.", "D. Air travel."],
+    answer: "B",
+    explanation: "Clients with pacemakers should avoid strong magnetic fields, such as those from MRI machines (unless the pacemaker is MRI-safe and cleared by the physician), as these can interfere with pacemaker function. Microwaves and typical cellphone use are generally safe with modern pacemakers."
+  },
+  {
+    id: 166, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is diagnosed with cardiac tamponade. The nurse would expect to find which of the following (Beck's triad)?",
+    options: ["A. Hypertension, bradycardia, and clear lung sounds", "B. Hypotension, muffled heart sounds, and jugular vein distension", "C. Fever, tachypnea, and productive cough", "D. Bradycardia, hypertension, and irregular respirations"],
+    answer: "B",
+    explanation: "Beck's triad — hypotension, muffled/distant heart sounds, and jugular vein distension — is the classic presentation of cardiac tamponade, caused by fluid accumulation in the pericardial sac compressing the heart and impairing filling."
+  },
+  {
+    id: 167, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is scheduled for a coronary artery bypass graft (CABG). Preoperative teaching should include informing the client that postoperatively, they will:",
+    options: ["A. Be extubated immediately in the operating room.", "B. Have a chest tube, be on a ventilator initially, and be monitored in ICU.", "C. Ambulate immediately after surgery.", "D. Not require any pain management."],
+    answer: "B",
+    explanation: "Following CABG surgery, clients are typically intubated and mechanically ventilated initially, monitored closely in the ICU, and have chest tubes in place to drain blood/fluid from the mediastinum and/or pleural space."
+  },
+  {
+    id: 168, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A nurse is caring for a client with infective endocarditis. Which finding is a classic sign of this condition?",
+    options: ["A. Osler's nodes and Janeway lesions", "B. Homan's sign", "C. Chvostek's sign", "D. Battle's sign"],
+    answer: "A",
+    explanation: "Osler's nodes (painful nodules on fingers/toes) and Janeway lesions (painless macules on palms/soles) are classic peripheral manifestations of infective endocarditis, caused by microemboli and immune complex deposition."
+  },
+  {
+    id: 169, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with hyperlipidemia is prescribed atorvastatin (Lipitor). The nurse should monitor for which adverse effect?",
+    options: ["A. Muscle pain and elevated creatine kinase (myopathy)", "B. Hyperglycemia only", "C. Hair loss", "D. Weight gain"],
+    answer: "A",
+    explanation: "Statins can cause myopathy, presenting as muscle pain, tenderness, or weakness, with elevated creatine kinase (CK) levels. In rare cases, this can progress to rhabdomyolysis. Clients should report unexplained muscle pain promptly."
+  },
+  {
+    id: 170, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is admitted with hypertensive crisis (BP 220/130 mmHg). The nurse's priority action is to:",
+    options: ["A. Lower the blood pressure to normal range within 1 hour.", "B. Administer IV antihypertensives to gradually lower BP, avoiding rapid drops.", "C. Withhold all treatment until symptoms develop.", "D. Encourage the client to walk to reduce BP naturally."],
+    answer: "B",
+    explanation: "In hypertensive crisis, blood pressure should be lowered gradually (typically no more than 25% within the first hour) using IV antihypertensives, as rapid correction can cause cerebral, cardiac, or renal ischemia due to impaired autoregulation."
+  },
+  {
+    id: 171, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client reports intermittent claudication in the calf muscles that resolves with rest. This is characteristic of:",
+    options: ["A. Chronic venous insufficiency", "B. Peripheral arterial disease", "C. Deep vein thrombosis", "D. Raynaud's phenomenon"],
+    answer: "B",
+    explanation: "Intermittent claudication — ischemic muscle pain during activity that is relieved by rest — is a classic symptom of peripheral arterial disease, caused by insufficient blood flow to meet the increased oxygen demand of exercising muscle."
+  },
+  {
+    id: 172, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client with chronic venous insufficiency should be taught to:",
+    options: ["A. Keep the legs in a dependent position as much as possible.", "B. Elevate the legs above heart level periodically throughout the day.", "C. Avoid compression stockings.", "D. Cross the legs when sitting."],
+    answer: "B",
+    explanation: "Elevating the legs above heart level helps venous return and reduces venous pooling and edema in chronic venous insufficiency. Compression stockings are also recommended, and leg crossing/prolonged dependent positioning should be avoided."
+  },
+  {
+    id: 173, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client is prescribed clopidogrel (Plavix) after a coronary stent placement. The nurse should teach the client to:",
+    options: ["A. Stop the medication if a headache occurs.", "B. Report any unusual bruising or bleeding, and not discontinue the medication without consulting the cardiologist.", "C. Take the medication only when chest pain occurs.", "D. Combine with NSAIDs freely for pain relief."],
+    answer: "B",
+    explanation: "Clopidogrel is an antiplatelet agent critical for preventing stent thrombosis. Clients must be taught to report bleeding/bruising but never stop the medication abruptly without consulting the cardiologist, as premature discontinuation significantly increases the risk of stent thrombosis and myocardial infarction."
+  },
+  {
+    id: 174, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client's ECG shows a prolonged PR interval greater than 0.20 seconds with a regular rhythm and no dropped beats. The nurse recognizes this as:",
+    options: ["A. First-degree AV block", "B. Second-degree AV block, type I (Wenckebach)", "C. Third-degree (complete) AV block", "D. Normal sinus rhythm"],
+    answer: "A",
+    explanation: "First-degree AV block is characterized by a prolonged PR interval (>0.20 seconds) with every P wave followed by a QRS complex (no dropped beats). It is usually asymptomatic and often does not require treatment."
+  },
+  {
+    id: 175, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A nurse is teaching a client about dietary modifications for hypertension (DASH diet). Which food choice indicates effective learning?",
+    options: ["A. Canned soups and processed deli meats", "B. Fresh fruits, vegetables, and low-fat dairy", "C. Salted snacks and pickled foods", "D. Fast food burgers"],
+    answer: "B",
+    explanation: "The DASH (Dietary Approaches to Stop Hypertension) diet emphasizes fresh fruits, vegetables, whole grains, and low-fat dairy while limiting sodium, saturated fat, and processed foods — all of which help lower blood pressure."
+  },
+  {
+    id: 176, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client post-myocardial infarction asks the nurse when they can resume sexual activity. The nurse's best response is based on the general guideline that sexual activity can typically resume when the client can:",
+    options: ["A. Walk up two flights of stairs without symptoms.", "B. Return to work full-time.", "C. Never resume sexual activity after an MI.", "D. Tolerate strenuous exercise without any monitoring."],
+    answer: "A",
+    explanation: "A widely used clinical guideline is that if a client can climb two flights of stairs (about 12-15 steps) without chest pain, dyspnea, or excessive fatigue, they generally have the cardiac reserve to resume sexual activity."
+  },
+  {
+    id: 177, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client has a serum troponin level that is markedly elevated 6 hours after onset of chest pain. This finding is most consistent with:",
+    options: ["A. Stable angina", "B. Myocardial infarction", "C. Pericarditis without myocardial damage", "D. A normal, expected post-exercise finding"],
+    answer: "B",
+    explanation: "Troponin is a highly specific marker for myocardial cell death. It begins to rise 3-6 hours after myocardial infarction, so a markedly elevated level at 6 hours strongly supports the diagnosis of MI rather than stable angina, which does not cause myocardial necrosis."
+  },
+  {
+    id: 178, subject: "Medical-Surgical Nursing", topic: "Cardiovascular",
+    year: "NMCN Review",
+    question: "A client receiving nitroglycerin sublingually for chest pain should be taught to:",
+    options: ["A. Swallow the tablet whole with water.", "B. Take up to 3 doses 5 minutes apart, and call emergency services if pain persists after the first dose.", "C. Take one dose only ever, regardless of symptoms.", "D. Chew the tablet before swallowing."],
+    answer: "B",
+    explanation: "Sublingual nitroglycerin should be placed under the tongue (not swallowed) and can be taken up to 3 doses, 5 minutes apart. Current guidelines recommend calling emergency services after the first dose if pain does not improve, given the risk of ongoing myocardial infarction."
+  },
+{
+    id: 179, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client is diagnosed with acute pancreatitis. Which laboratory finding supports this diagnosis?",
+    options: ["A. Decreased serum amylase and lipase", "B. Elevated serum amylase and lipase", "C. Decreased serum glucose", "D. Elevated serum calcium"],
+    answer: "B", explanation: "Elevated serum amylase and lipase (lipase being more specific and lasting longer) are the hallmark laboratory findings in acute pancreatitis, reflecting pancreatic cell injury and enzyme release."
+  },
+  {
+    id: 180, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with acute pancreatitis reports severe abdominal pain. The nurse should position the client:",
+    options: ["A. Supine with legs straight", "B. Side-lying with knees drawn to chest, or sitting up and leaning forward", "C. Trendelenburg position", "D. Prone position"],
+    answer: "B", explanation: "The fetal position (side-lying with knees drawn to chest) or sitting up and leaning forward reduces tension on the abdomen and can relieve pain associated with pancreatitis."
+  },
+  {
+    id: 181, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with cirrhosis develops asterixis and confusion. The nurse recognizes these as signs of:",
+    options: ["A. Hepatorenal syndrome", "B. Hepatic encephalopathy", "C. Esophageal varices", "D. Ascites"],
+    answer: "B", explanation: "Asterixis (a flapping tremor of the hands) combined with confusion in a client with liver disease indicates hepatic encephalopathy, caused by the accumulation of ammonia and other toxins the diseased liver cannot metabolize."
+  },
+  {
+    id: 182, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "Lactulose is prescribed for a client with hepatic encephalopathy. The therapeutic goal of this medication is to:",
+    options: ["A. Increase serum ammonia levels.", "B. Promote bowel evacuation to reduce ammonia absorption.", "C. Cause constipation to retain nutrients.", "D. Treat esophageal varices directly."],
+    answer: "B", explanation: "Lactulose works by acidifying the colon and acting as an osmotic laxative, trapping ammonia in the gut and promoting its excretion through the stool, thereby lowering serum ammonia levels and improving hepatic encephalopathy."
+  },
+  {
+    id: 183, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with esophageal varices is at risk for which life-threatening complication?",
+    options: ["A. Massive gastrointestinal hemorrhage", "B. Bowel obstruction", "C. Appendicitis", "D. Cholecystitis"],
+    answer: "A", explanation: "Esophageal varices are dilated, fragile veins in the esophagus resulting from portal hypertension. They can rupture, causing sudden, massive, life-threatening GI hemorrhage."
+  },
+  {
+    id: 184, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client is diagnosed with a peptic ulcer caused by Helicobacter pylori. Expected treatment includes:",
+    options: ["A. Antibiotics combined with a proton pump inhibitor.", "B. NSAIDs for pain relief.", "C. Antacids alone as the sole treatment.", "D. High-dose corticosteroids."],
+    answer: "A", explanation: "H. pylori-associated peptic ulcers are treated with a combination of antibiotics (e.g., amoxicillin, clarithromycin) and a proton pump inhibitor to eradicate the bacteria and reduce gastric acid, allowing the ulcer to heal."
+  },
+  {
+    id: 185, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with a peptic ulcer suddenly develops severe abdominal pain, a rigid, board-like abdomen, and hypotension. The nurse suspects:",
+    options: ["A. Simple indigestion", "B. Perforation of the ulcer", "C. Gastroenteritis", "D. Constipation"],
+    answer: "B", explanation: "A sudden onset of severe pain with a rigid, board-like abdomen and signs of shock (hypotension) suggests perforation of the ulcer, causing peritonitis — a surgical emergency."
+  },
+  {
+    id: 186, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client is diagnosed with ulcerative colitis. Which of the following is a hallmark symptom?",
+    options: ["A. Bloody diarrhea with mucus", "B. Chronic constipation", "C. Weight gain", "D. Absence of abdominal pain"],
+    answer: "A", explanation: "Ulcerative colitis characteristically causes bloody diarrhea with mucus, along with abdominal cramping, urgency, and tenesmus, due to continuous mucosal inflammation of the colon and rectum."
+  },
+  {
+    id: 187, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "The nurse is caring for a client with Crohn's disease. Unlike ulcerative colitis, Crohn's disease is characterized by:",
+    options: ["A. Continuous inflammation limited to the colon and rectum.", "B. Patchy, transmural inflammation that can affect any part of the GI tract from mouth to anus.", "C. Involvement of the colon only, in a continuous pattern.", "D. No risk of fistula formation."],
+    answer: "B", explanation: "Crohn's disease causes patchy ('skip lesion') transmural inflammation that can affect any segment of the GI tract, commonly the terminal ileum, and is prone to fistula, stricture, and abscess formation — unlike ulcerative colitis, which is continuous and limited to the colon/rectum mucosa."
+  },
+  {
+    id: 188, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client is admitted with suspected appendicitis. The nurse should avoid which of the following actions?",
+    options: ["A. Applying an ice pack to the abdomen.", "B. Applying heat to the abdomen.", "C. Monitoring vital signs.", "D. Keeping the client NPO."],
+    answer: "B", explanation: "Applying heat to the abdomen in suspected appendicitis is contraindicated, as it can increase blood flow to the area and increase the risk of appendix rupture."
+  },
+  {
+    id: 189, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with appendicitis suddenly reports that the abdominal pain has stopped. The nurse should interpret this as:",
+    options: ["A. A sign of improvement and recovery.", "B. A possible sign of appendix rupture, requiring immediate assessment.", "C. Normal resolution of inflammation.", "D. An indication that pain medication is working well."],
+    answer: "B", explanation: "Sudden relief of pain in appendicitis can indicate rupture of the appendix, as the pressure within the inflamed organ is released. This is often followed by signs of peritonitis and requires urgent assessment and intervention."
+  },
+  {
+    id: 190, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client has a new colostomy following bowel resection. Which finding would the nurse expect as normal in the immediate postoperative period?",
+    options: ["A. Dark red to purplish stoma color", "B. Pink to red, moist stoma with slight edema", "C. Pale, dusky, or black stoma", "D. No drainage from the stoma for the first week"],
+    answer: "B", explanation: "A healthy stoma should appear pink to red and moist, similar to the inside of the cheek, often with mild edema in the immediate postoperative period. A pale, dusky, or black stoma indicates ischemia and requires immediate physician notification."
+  },
+  {
+    id: 191, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with a nasogastric tube for decompression is NPO. The nurse should assess bowel sounds and expect the tube to be discontinued when the client:",
+    options: ["A. Requests food.", "B. Passes flatus and bowel sounds return.", "C. Has been NPO for 24 hours regardless of symptoms.", "D. Reports feeling hungry."],
+    answer: "B", explanation: "Return of bowel function, evidenced by the return of bowel sounds and passage of flatus, indicates resolution of ileus and readiness to advance diet, at which point the NG tube for decompression can typically be discontinued."
+  },
+  {
+    id: 192, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with GERD is being taught lifestyle modifications. Which statement indicates effective teaching?",
+    options: ["A. \u201cI will lie down right after meals to help digestion.\u201d", "B. \u201cI will avoid eating for 2-3 hours before lying down.\u201d", "C. \u201cI should wear tight-fitting clothing around my waist.\u201d", "D. \u201cI will increase my intake of chocolate and caffeine.\u201d"],
+    answer: "B", explanation: "Avoiding food for 2-3 hours before lying down reduces the risk of reflux by allowing the stomach to empty. Clients should also avoid lying flat after meals, tight clothing, and trigger foods like chocolate, caffeine, and fatty/spicy foods."
+  },
+  {
+    id: 193, subject: "Anatomy & Physiology", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "The primary organ responsible for the production of bile is the:",
+    options: ["A. Pancreas", "B. Gallbladder", "C. Liver", "D. Spleen"],
+    answer: "C", explanation: "The liver produces bile, which is then stored and concentrated in the gallbladder before being released into the duodenum to aid in fat digestion."
+  },
+  {
+    id: 194, subject: "Medical-Surgical Nursing", topic: "Gastrointestinal",
+    year: "NMCN Review", question: "A client with cholecystitis reports pain that radiates to the right shoulder after eating fatty foods. The nurse identifies this as:",
+    options: ["A. Murphy's sign", "B. McBurney's point tenderness", "C. Referred pain typical of gallbladder disease", "D. A sign unrelated to the gallbladder"],
+    answer: "C", explanation: "Pain from gallbladder disease commonly radiates to the right shoulder or scapula due to shared nerve pathways (referred pain via the phrenic nerve), and is classically triggered by fatty food intake, which stimulates gallbladder contraction."
+  },
+  {
+    id: 195, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client with acute kidney injury has a potassium level of 6.8 mEq/L. Which ECG change would the nurse expect?",
+    options: ["A. Flattened T waves", "B. Peaked T waves", "C. Prolonged QT interval only", "D. U waves"],
+    answer: "B", explanation: "Hyperkalemia (K+ 6.8 mEq/L, above normal 3.5-5.0) classically causes peaked, tented T waves on ECG, and can progress to widened QRS complexes and life-threatening arrhythmias if untreated."
+  },
+  {
+    id: 196, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client with chronic kidney disease is prescribed a diet restriction. The nurse should teach the client to limit intake of which nutrient?",
+    options: ["A. Carbohydrates only", "B. Potassium, phosphorus, and sodium", "C. Vitamin C exclusively", "D. Fiber"],
+    answer: "B", explanation: "Clients with chronic kidney disease typically require restriction of potassium, phosphorus, and sodium, as impaired renal function reduces the body's ability to excrete these substances, risking hyperkalemia, hyperphosphatemia, and fluid overload."
+  },
+  {
+    id: 197, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client is receiving hemodialysis. Immediately after the session, the nurse should prioritize monitoring for:",
+    options: ["A. Hypertension and fluid overload.", "B. Hypotension and disequilibrium syndrome.", "C. Hyperkalemia.", "D. Constipation."],
+    answer: "B", explanation: "Post-dialysis, clients are at risk for hypotension (from rapid fluid removal) and dialysis disequilibrium syndrome (headache, nausea, confusion from rapid shifts in solutes/fluid between blood and brain), requiring close monitoring."
+  },
+  {
+    id: 198, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client has an arteriovenous (AV) fistula for hemodialysis access. The nurse should avoid which of the following?",
+    options: ["A. Palpating for a thrill over the fistula.", "B. Taking blood pressure or drawing blood from the fistula arm.", "C. Auscultating for a bruit over the fistula.", "D. Teaching the client to protect the arm from trauma."],
+    answer: "B", explanation: "Blood pressure measurement, venipuncture, and IV insertion should never be performed on the arm with an AV fistula, as this can damage the fistula or cause thrombosis, jeopardizing this vital dialysis access."
+  },
+  {
+    id: 199, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client with a urinary tract infection is prescribed nitrofurantoin. The nurse should instruct the client to take the medication:",
+    options: ["A. On an empty stomach for best absorption.", "B. With food to increase absorption and reduce GI upset.", "C. Only at bedtime, regardless of dosing schedule.", "D. With antacids to reduce stomach irritation."],
+    answer: "B", explanation: "Nitrofurantoin should be taken with food, which increases its absorption and reduces gastrointestinal side effects such as nausea."
+  },
+  {
+    id: 200, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client with a renal calculus (kidney stone) reports severe flank pain radiating to the groin. The PRIORITY nursing intervention is to:",
+    options: ["A. Restrict all fluid intake.", "B. Encourage increased fluid intake and strain all urine.", "C. Apply ice to the flank continuously.", "D. Encourage bed rest only, without fluids."],
+    answer: "B", explanation: "Increasing fluid intake helps flush the urinary system and may facilitate stone passage. Straining all urine allows collection of the stone for laboratory analysis to guide future prevention strategies."
+  },
+  {
+    id: 201, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client is diagnosed with benign prostatic hyperplasia (BPH). Which symptom would the nurse expect?",
+    options: ["A. Increased urinary stream force", "B. Urinary hesitancy, frequency, and weak stream", "C. Absence of nocturia", "D. Hematuria as the primary presenting symptom"],
+    answer: "B", explanation: "BPH causes enlargement of the prostate, compressing the urethra and leading to lower urinary tract symptoms: hesitancy, weak/interrupted stream, frequency, urgency, and nocturia."
+  },
+  {
+    id: 202, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client is recovering from a transurethral resection of the prostate (TURP) and has continuous bladder irrigation (CBI). The nurse notes the drainage is bright red with clots. The PRIORITY action is to:",
+    options: ["A. Document the finding as expected and continue routine care.", "B. Increase the irrigation rate and notify the physician if bleeding persists or worsens.", "C. Discontinue the irrigation completely.", "D. Clamp the catheter."],
+    answer: "B", explanation: "Bright red drainage with clots suggests active arterial bleeding. The nurse should increase the CBI irrigation rate to flush clots and prevent catheter obstruction, and notify the physician, as significant bleeding may require intervention."
+  },
+  {
+    id: 203, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A nurse is caring for a client with nephrotic syndrome. Which of the following findings is characteristic?",
+    options: ["A. Hypoalbuminemia, massive proteinuria, and edema", "B. Hyperalbuminemia and no proteinuria", "C. Polyuria and dehydration", "D. Hypertension as the only symptom"],
+    answer: "A", explanation: "Nephrotic syndrome is characterized by massive proteinuria, resulting hypoalbuminemia, and consequent edema due to decreased plasma oncotic pressure, along with hyperlipidemia."
+  },
+  {
+    id: 204, subject: "Anatomy & Physiology", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "The functional unit of the kidney responsible for filtration is the:",
+    options: ["A. Ureter", "B. Nephron", "C. Bladder", "D. Renal pelvis"],
+    answer: "B", explanation: "The nephron is the basic structural and functional unit of the kidney, responsible for filtering blood and forming urine through filtration, reabsorption, and secretion."
+  },
+  {
+    id: 205, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with a fractured femur develops sudden shortness of breath, tachycardia, and petechiae on the chest. The nurse suspects:",
+    options: ["A. Pulmonary embolism from DVT", "B. Fat embolism syndrome", "C. Simple anxiety", "D. Compartment syndrome"],
+    answer: "B", explanation: "Fat embolism syndrome is a serious complication of long bone fractures (especially the femur), presenting with the classic triad of respiratory distress, neurological changes, and petechial rash (often on the chest, axilla, or conjunctiva), typically within 24-72 hours of injury."
+  },
+  {
+    id: 206, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with a cast on the right leg reports severe pain unrelieved by pain medication, along with numbness and tingling in the toes. The nurse suspects:",
+    options: ["A. Normal post-injury pain.", "B. Compartment syndrome.", "C. Deep vein thrombosis.", "D. A need for more pain medication only."],
+    answer: "B", explanation: "Pain that is disproportionate to the injury and unrelieved by medication, along with paresthesia, is a hallmark early sign of compartment syndrome — a limb-threatening emergency caused by increased pressure within a muscle compartment that compromises circulation and nerve function."
+  },
+  {
+    id: 207, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "The 6 P's of compartment syndrome assessment include all of the following EXCEPT:",
+    options: ["A. Pain", "B. Pallor", "C. Polyuria", "D. Paresthesia"],
+    answer: "C", explanation: "The 6 P's of compartment syndrome are Pain, Pallor, Paresthesia, Pulselessness, Poikilothermia, and Paralysis. Polyuria (excessive urination) is not part of this assessment framework."
+  },
+  {
+    id: 208, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client is in Buck's traction for a hip fracture. The nurse should ensure that:",
+    options: ["A. Weights are resting on the floor.", "B. Weights hang freely and are not resting on the floor or bed.", "C. The client's leg is in internal rotation.", "D. The traction is removed for repositioning every hour."],
+    answer: "B", explanation: "For traction to be effective, the weights must hang freely without touching the floor or bed, maintaining continuous pull. Weights resting on a surface interrupt the therapeutic traction force."
+  },
+  {
+    id: 209, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client is scheduled for a total hip replacement. Postoperative teaching should include avoiding which of the following movements to prevent dislocation?",
+    options: ["A. Keeping the hip in a neutral, extended position.", "B. Crossing the legs, hip flexion greater than 90 degrees, and internal rotation.", "C. Using an abduction pillow.", "D. Walking with assistance."],
+    answer: "B", explanation: "After total hip replacement (posterior approach), clients must avoid hip flexion greater than 90 degrees, adduction (crossing legs), and internal rotation, as these positions increase the risk of prosthetic hip dislocation."
+  },
+  {
+    id: 210, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with osteoporosis is prescribed alendronate (Fosamax). The nurse should instruct the client to:",
+    options: ["A. Take the medication with food and lie down afterward.", "B. Take the medication first thing in the morning with water, and remain upright for at least 30 minutes.", "C. Take the medication at bedtime.", "D. Crush the tablet for easier swallowing."],
+    answer: "B", explanation: "Bisphosphonates like alendronate must be taken on an empty stomach first thing in the morning with a full glass of plain water, and the client should remain upright (sitting or standing) for at least 30 minutes to reduce the risk of esophageal irritation and improve absorption."
+  },
+  {
+    id: 211, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with rheumatoid arthritis reports morning joint stiffness. The nurse should recommend:",
+    options: ["A. Complete rest of the joints with no movement.", "B. A warm shower and gentle range-of-motion exercises in the morning.", "C. Applying ice to all joints immediately upon waking.", "D. Avoiding all physical activity permanently."],
+    answer: "B", explanation: "Warm showers and gentle range-of-motion exercises help reduce morning stiffness in rheumatoid arthritis by improving joint mobility and circulation, without overstressing inflamed joints."
+  },
+  {
+    id: 212, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with gout is prescribed allopurinol. The nurse should teach the client that this medication works by:",
+    options: ["A. Increasing uric acid production.", "B. Decreasing uric acid production.", "C. Directly relieving acute joint pain.", "D. Curing gout permanently after one dose."],
+    answer: "B", explanation: "Allopurinol is a xanthine oxidase inhibitor that decreases uric acid production, helping prevent future gout attacks. It is used for long-term prevention, not for treating acute gout flares."
+  },
+  {
+    id: 213, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with a new below-the-knee amputation should be positioned to prevent contractures by:",
+    options: ["A. Keeping a pillow under the residual limb at all times.", "B. Avoiding prolonged flexion of the hip and knee; encouraging periods of prone positioning.", "C. Elevating the limb continuously with the hip flexed.", "D. Keeping the limb in a dependent position only."],
+    answer: "B", explanation: "Prolonged flexion of the hip and knee (such as with a pillow constantly under the residual limb) increases the risk of flexion contractures. Periods of prone positioning help stretch the hip flexors and prevent contracture formation."
+  },
+  {
+    id: 214, subject: "Anatomy & Physiology", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "The type of joint that allows the most movement, such as the shoulder and hip joints, is the:",
+    options: ["A. Hinge joint", "B. Ball-and-socket joint", "C. Pivot joint", "D. Suture joint"],
+    answer: "B", explanation: "Ball-and-socket joints, such as the shoulder and hip, allow the greatest range of motion, including flexion, extension, abduction, adduction, and rotation."
+  },
+  {
+    id: 215, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client is placed in skeletal traction with pins. The nurse should assess pin sites for signs of:",
+    options: ["A. Normal healing only, with no other concerns.", "B. Infection, such as redness, drainage, or odor.", "C. Excessive callus formation.", "D. Complete bone remodeling."],
+    answer: "B", explanation: "Pin sites in skeletal traction are a portal of entry for infection and must be assessed regularly for redness, purulent drainage, odor, and increased pain, which would indicate pin site infection requiring intervention."
+  },
+  {
+    id: 216, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with a new plaster cast should be taught that the cast will feel warm during the first 24 hours because:",
+    options: ["A. This indicates infection.", "B. This is due to the chemical/exothermic drying process of the cast.", "C. This means the cast is too tight.", "D. This is a sign of poor circulation."],
+    answer: "B", explanation: "Plaster casts generate heat through an exothermic chemical reaction as they dry, which is a normal, expected finding within the first 24 hours and not a cause for concern."
+  },
+  {
+    id: 217, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with systemic lupus erythematosus (SLE) should be taught to avoid which of the following to prevent disease exacerbation?",
+    options: ["A. Sun exposure and ultraviolet light.", "B. Rest and stress management.", "C. Balanced nutrition.", "D. Regular follow-up appointments."],
+    answer: "A", explanation: "Sun exposure and ultraviolet light are known triggers for SLE flares, often causing the characteristic malar (butterfly) rash and systemic exacerbation. Clients should be taught to use sunscreen and protective clothing."
+  },
+  {
+    id: 218, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client is diagnosed with osteomyelitis. The nurse understands this condition is:",
+    options: ["A. A degenerative joint disease.", "B. An infection of the bone, often requiring prolonged IV antibiotics.", "C. A benign bone tumor.", "D. A metabolic bone disorder unrelated to infection."],
+    answer: "B", explanation: "Osteomyelitis is an infection of the bone, commonly caused by Staphylococcus aureus, requiring prolonged (often 4-6 weeks or more) IV antibiotic therapy and sometimes surgical debridement."
+  },
+  {
+    id: 219, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client following spinal fusion surgery should be taught to:",
+    options: ["A. Bend at the waist to pick up objects from the floor.", "B. Log-roll when turning in bed and avoid twisting the spine.", "C. Twist the torso freely without restriction.", "D. Avoid all mobility indefinitely."],
+    answer: "B", explanation: "After spinal fusion, log-rolling (turning the body as a unit while keeping the spine aligned) is essential to prevent twisting or bending the fused spinal segment, which could disrupt healing."
+  },
+  {
+    id: 220, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client with a sprained ankle is taught the RICE method for initial management. RICE stands for:",
+    options: ["A. Rest, Ice, Compression, Elevation", "B. Rest, Injection, Cast, Exercise", "C. Reduce, Immobilize, Compress, Elevate", "D. Rest, Ice, Circulation, Exercise"],
+    answer: "A", explanation: "RICE (Rest, Ice, Compression, Elevation) is the standard initial first-aid approach for soft tissue injuries like sprains, reducing swelling, pain, and further injury in the acute phase."
+  },
+{
+    id: 221, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with type 1 diabetes presents with fruity breath odor, Kussmaul respirations, and blood glucose of 450 mg/dL. The nurse suspects:",
+    options: ["A. Hypoglycemia", "B. Diabetic ketoacidosis (DKA)", "C. Hyperosmolar hyperglycemic state only", "D. Somogyi effect"],
+    answer: "B", explanation: "Fruity (acetone) breath odor, Kussmaul respirations (deep, rapid breathing to compensate for metabolic acidosis), and markedly elevated blood glucose are classic findings of diabetic ketoacidosis, a life-threatening complication of type 1 diabetes."
+  },
+  {
+    id: 222, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "The PRIORITY nursing intervention for a client in diabetic ketoacidosis is:",
+    options: ["A. Administering oral hypoglycemic agents.", "B. IV fluid resuscitation followed by IV insulin therapy.", "C. Restricting all fluids.", "D. Administering glucagon immediately."],
+    answer: "B", explanation: "The priority in DKA management is fluid resuscitation with IV isotonic saline to correct dehydration and improve perfusion, followed by IV regular insulin to lower blood glucose and halt ketone production, along with careful potassium monitoring."
+  },
+  {
+    id: 223, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with diabetes reports shakiness, sweating, and confusion. Blood glucose is 52 mg/dL. The nurse's PRIORITY action, if the client is conscious and able to swallow, is to:",
+    options: ["A. Administer 15-20 grams of a fast-acting carbohydrate.", "B. Administer regular insulin.", "C. Withhold all food until the physician arrives.", "D. Encourage the client to exercise to raise blood sugar."],
+    answer: "A", explanation: "For a conscious client with hypoglycemia (glucose <70 mg/dL), the nurse should give 15-20 grams of a fast-acting carbohydrate (e.g., glucose tablets, juice), then recheck blood glucose in 15 minutes and repeat if needed (the 'rule of 15')."
+  },
+  {
+    id: 224, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with Graves' disease (hyperthyroidism) is scheduled for radioactive iodine therapy. The nurse should teach the client that after treatment, they should:",
+    options: ["A. Resume close contact with pregnant women and infants immediately.", "B. Avoid close, prolonged contact with pregnant women and young children for several days as instructed.", "C. Expect immediate resolution of all symptoms.", "D. Discontinue all thyroid monitoring afterward."],
+    answer: "B", explanation: "Radioactive iodine emits radiation that can pose a risk to others, particularly pregnant women and young children. Clients are instructed to limit close, prolonged contact with these groups for a specified period following treatment as radiation safety precautions."
+  },
+  {
+    id: 225, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with hyperthyroidism develops a fever of 104°F, tachycardia, and severe agitation postoperatively after a thyroidectomy. The nurse suspects:",
+    options: ["A. Normal postoperative recovery.", "B. Thyroid storm (thyrotoxic crisis).", "C. Hypothyroidism.", "D. Wound infection only."],
+    answer: "B", explanation: "Thyroid storm is a life-threatening complication of hyperthyroidism, often precipitated by surgery, infection, or stress, presenting with high fever, severe tachycardia, agitation, and can progress to cardiovascular collapse if untreated."
+  },
+  {
+    id: 226, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client following a thyroidectomy develops tingling around the mouth and fingers, along with muscle twitching. The nurse should assess for:",
+    options: ["A. Trousseau's and Chvostek's signs, indicating hypocalcemia.", "B. Signs of hyperkalemia.", "C. Signs of hyperglycemia.", "D. Signs of fluid volume excess."],
+    answer: "A", explanation: "Accidental removal or damage to the parathyroid glands during thyroidectomy can cause hypocalcemia. Trousseau's sign (carpal spasm with BP cuff inflation) and Chvostek's sign (facial twitching with tapping the facial nerve) are classic assessment findings for hypocalcemia/tetany."
+  },
+  {
+    id: 227, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with Addison's disease (adrenal insufficiency) should be taught to:",
+    options: ["A. Abruptly stop corticosteroid medication if feeling well.", "B. Never abruptly discontinue corticosteroid therapy and to increase the dose during illness or stress as directed.", "C. Restrict sodium intake severely.", "D. Avoid all physician follow-up once stable."],
+    answer: "B", explanation: "Clients with Addison's disease require lifelong corticosteroid replacement and must never abruptly stop the medication, as this can precipitate a life-threatening adrenal crisis. Doses are typically increased during periods of illness, surgery, or significant stress, per physician guidance."
+  },
+  {
+    id: 228, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with Cushing's syndrome (excess cortisol) would be expected to exhibit which of the following?",
+    options: ["A. Weight loss and hypotension.", "B. Moon face, truncal obesity, and hypertension.", "C. Hyperpigmentation and hypoglycemia.", "D. Muscle hypertrophy."],
+    answer: "B", explanation: "Cushing's syndrome results from excess cortisol and classically presents with moon face, truncal (central) obesity with thin extremities, buffalo hump, hypertension, hyperglycemia, and muscle wasting."
+  },
+  {
+    id: 229, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with syndrome of inappropriate antidiuretic hormone (SIADH) would be expected to have which laboratory finding?",
+    options: ["A. Hypernatremia and dilute urine", "B. Hyponatremia with concentrated urine", "C. Hyperglycemia", "D. Elevated serum osmolality"],
+    answer: "B", explanation: "SIADH causes excessive water retention due to inappropriate ADH secretion, resulting in dilutional hyponatremia with concentrated urine (high urine osmolality) despite low serum osmolality."
+  },
+  {
+    id: 230, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with diabetes insipidus presents with polyuria and polydipsia. This condition results from a deficiency of:",
+    options: ["A. Insulin", "B. Antidiuretic hormone (ADH)", "C. Cortisol", "D. Thyroid hormone"],
+    answer: "B", explanation: "Diabetes insipidus results from insufficient ADH secretion (central) or renal insensitivity to ADH (nephrogenic), causing the kidneys to excrete large volumes of dilute urine, leading to polyuria and compensatory polydipsia."
+  },
+  {
+    id: 231, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client is prescribed levothyroxine for hypothyroidism. The nurse should instruct the client to take this medication:",
+    options: ["A. With food to enhance absorption.", "B. On an empty stomach in the morning, at least 30-60 minutes before food.", "C. At bedtime with a snack.", "D. Only when symptoms are present."],
+    answer: "B", explanation: "Levothyroxine should be taken on an empty stomach, first thing in the morning, at least 30-60 minutes before eating, to ensure consistent absorption, and should be taken at the same time each day."
+  },
+  {
+    id: 232, subject: "Anatomy & Physiology", topic: "Endocrine",
+    year: "NMCN Review", question: "Which gland is often referred to as the 'master gland' because it regulates the function of other endocrine glands?",
+    options: ["A. Thyroid gland", "B. Adrenal gland", "C. Pituitary gland", "D. Pancreas"],
+    answer: "C", explanation: "The pituitary gland is called the 'master gland' because it secretes hormones that regulate the function of other endocrine glands, including the thyroid, adrenal glands, and gonads."
+  },
+  {
+    id: 233, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client has a second-degree (partial-thickness) burn. The nurse would expect the wound to appear:",
+    options: ["A. Dry, leathery, and painless.", "B. Red, blistered, moist, and painful.", "C. Charred and black.", "D. White and waxy with no sensation."],
+    answer: "B", explanation: "Second-degree (partial-thickness) burns involve the epidermis and part of the dermis, presenting as red, blistered, moist wounds that are very painful due to intact nerve endings. Full-thickness (third-degree) burns, by contrast, are often dry, leathery, and painless due to nerve destruction."
+  },
+  {
+    id: 234, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "Using the Rule of Nines, a burn covering the entire anterior trunk and both entire arms in an adult would be estimated at approximately:",
+    options: ["A. 9%", "B. 18%", "C. 36%", "D. 54%"],
+    answer: "C", explanation: "In the adult Rule of Nines, the anterior trunk represents 18% and each entire arm represents 9% (18% for both arms), totaling 18% + 18% = 36% total body surface area."
+  },
+  {
+    id: 235, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client with major burns is at greatest risk for which complication in the first 24-48 hours?",
+    options: ["A. Hypervolemia and fluid overload", "B. Hypovolemic shock from fluid shifts", "C. Chronic kidney disease", "D. Skin cancer"],
+    answer: "B", explanation: "In the emergent/resuscitative phase of burn injury (first 24-48 hours), massive fluid shifts from the intravascular space into the interstitial space (third spacing) put the client at high risk for hypovolemic shock, requiring aggressive fluid resuscitation."
+  },
+  {
+    id: 236, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client with a stage 2 pressure injury on the sacrum has a partial-thickness skin loss with a shallow, open ulcer. Appropriate nursing care includes:",
+    options: ["A. Massaging the area to increase circulation.", "B. Repositioning the client at least every 2 hours and using appropriate wound dressings.", "C. Applying a heating pad directly to the area.", "D. Leaving the wound completely uncovered and exposed at all times."],
+    answer: "B", explanation: "Frequent repositioning (at least every 2 hours) relieves pressure and prevents worsening of the injury, along with appropriate moist wound healing dressings. Massaging reddened or injured skin is contraindicated as it can cause further tissue damage."
+  },
+  {
+    id: 237, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client is diagnosed with cellulitis of the lower leg. The nurse would expect which of the following findings?",
+    options: ["A. Cool, pale skin with no tenderness.", "B. Warm, red, swollen, tender skin, possibly with fever.", "C. A well-demarcated, painless white patch.", "D. Excessive hair growth in the area."],
+    answer: "B", explanation: "Cellulitis is a bacterial skin infection presenting with warmth, erythema, edema, tenderness, and often systemic symptoms like fever, due to the inflammatory response to infection in the skin and subcutaneous tissue."
+  },
+  {
+    id: 238, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client with psoriasis is prescribed topical corticosteroids. The nurse should teach the client that long-term use can cause:",
+    options: ["A. Skin thickening (hypertrophy).", "B. Skin thinning (atrophy) and striae.", "C. Increased pigmentation only.", "D. Permanent cure with no recurrence."],
+    answer: "B", explanation: "Long-term or excessive use of topical corticosteroids can cause skin thinning (atrophy), striae, and telangiectasia, so use should be limited to the prescribed duration and area."
+  },
+  {
+    id: 239, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client presents with a new asymmetrical mole with irregular borders, multiple colors, and a diameter greater than 6mm. The nurse should be concerned about:",
+    options: ["A. A benign nevus.", "B. Malignant melanoma (based on ABCDE criteria).", "C. Normal skin aging.", "D. A insect bite."],
+    answer: "B", explanation: "The ABCDE criteria (Asymmetry, Border irregularity, Color variation, Diameter >6mm, Evolving) are used to screen for malignant melanoma. A lesion meeting these criteria warrants prompt dermatological evaluation and biopsy."
+  },
+  {
+    id: 240, subject: "Anatomy & Physiology", topic: "Integumentary",
+    year: "NMCN Review", question: "The layer of skin that contains blood vessels, nerve endings, and hair follicles is the:",
+    options: ["A. Epidermis", "B. Dermis", "C. Subcutaneous tissue (hypodermis)", "D. Stratum corneum"],
+    answer: "B", explanation: "The dermis, located beneath the epidermis, contains blood vessels, nerve endings, hair follicles, and sweat glands, providing structural support and sensation to the skin."
+  },
+  {
+    id: 241, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with sickle cell disease is experiencing a vaso-occlusive crisis. The PRIORITY nursing interventions include:",
+    options: ["A. Fluid restriction and applying cold compresses.", "B. Aggressive hydration, oxygen therapy, and pain management.", "C. Withholding pain medication to avoid addiction.", "D. Encouraging strenuous activity."],
+    answer: "B", explanation: "A vaso-occlusive crisis in sickle cell disease is caused by sickled cells obstructing blood flow, causing severe pain and tissue ischemia. Management focuses on aggressive IV hydration (to reduce blood viscosity), oxygen therapy, and adequate pain management (often requiring opioids)."
+  },
+  {
+    id: 242, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with sickle cell disease should be taught to avoid which of the following, as they can precipitate a crisis?",
+    options: ["A. Adequate hydration.", "B. Dehydration, extreme temperatures, and high altitudes.", "C. Regular rest.", "D. Prophylactic vaccinations."],
+    answer: "B", explanation: "Dehydration, extreme cold or heat, high altitudes (low oxygen environments), infection, and stress are known triggers that can precipitate sickling of red blood cells and lead to a vaso-occlusive crisis."
+  },
+  {
+    id: 243, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with iron-deficiency anemia is prescribed oral ferrous sulfate. The nurse should instruct the client that this medication may cause:",
+    options: ["A. Bright yellow stools.", "B. Dark, tarry stools (harmless discoloration) and possible constipation.", "C. Immediate resolution of anemia within 24 hours.", "D. Hair loss as a common side effect."],
+    answer: "B", explanation: "Oral iron supplements commonly cause dark or greenish-black stools (a harmless side effect from unabsorbed iron) and constipation. Clients should be reassured that stool discoloration is expected and taught measures to manage constipation, such as increased fluid and fiber intake."
+  },
+  {
+    id: 244, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with pernicious anemia requires lifelong treatment with:",
+    options: ["A. Oral iron supplements.", "B. Vitamin B12 injections.", "C. Folic acid supplements only.", "D. Blood transfusions monthly."],
+    answer: "B", explanation: "Pernicious anemia results from a lack of intrinsic factor (needed for vitamin B12 absorption), so oral B12 is poorly absorbed. Clients require lifelong vitamin B12 injections (or high-dose oral/intranasal forms in some cases) to prevent recurrence and neurological complications."
+  },
+  {
+    id: 245, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client is receiving a blood transfusion and develops chills, fever, back pain, and hypotension within 15 minutes. The nurse's FIRST action is to:",
+    options: ["A. Slow the infusion rate and monitor.", "B. Stop the transfusion immediately, keep the IV line open with normal saline, and notify the physician.", "C. Administer acetaminophen and continue the transfusion.", "D. Increase the infusion rate to complete it quickly."],
+    answer: "B", explanation: "These symptoms suggest an acute hemolytic transfusion reaction, a medical emergency. The nurse must immediately stop the transfusion, keep the IV line patent with normal saline (using new tubing), notify the physician, and monitor the client closely."
+  },
+  {
+    id: 246, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with hemophilia A has a deficiency in which clotting factor?",
+    options: ["A. Factor V", "B. Factor VIII", "C. Factor II (prothrombin)", "D. Vitamin K"],
+    answer: "B", explanation: "Hemophilia A is caused by a deficiency in clotting factor VIII, resulting in impaired clot formation and increased bleeding risk, particularly into joints and muscles."
+  },
+  {
+    id: 247, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client with HIV has a CD4+ count of 180 cells/mm³. The nurse understands this places the client at risk for:",
+    options: ["A. No increased risk, as this is a normal count.", "B. Opportunistic infections, as this count meets the criteria for AIDS.", "C. Only mild, self-limiting infections.", "D. Improved immune function."],
+    answer: "B", explanation: "A CD4+ count below 200 cells/mm³ meets the diagnostic criteria for AIDS (Acquired Immunodeficiency Syndrome) and places the client at significantly increased risk for opportunistic infections such as Pneumocystis pneumonia and other AIDS-defining illnesses."
+  },
+  {
+    id: 248, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client is receiving chemotherapy and has a neutrophil count of 400 cells/mm³ (neutropenia). Priority nursing care includes:",
+    options: ["A. Encouraging visits from family with any illness.", "B. Neutropenic precautions: hand hygiene, avoiding fresh flowers/raw foods, and limiting exposure to infection sources.", "C. No special precautions are needed.", "D. Encouraging fresh salads and raw fruits for nutrition."],
+    answer: "B", explanation: "Severe neutropenia significantly increases infection risk. Neutropenic precautions include strict hand hygiene, avoiding raw/undercooked foods and fresh flowers/plants (which can harbor bacteria/fungi), limiting visitors with illness, and monitoring for even subtle signs of infection."
+  },
+  {
+    id: 249, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client is diagnosed with disseminated intravascular coagulation (DIC). The nurse understands this condition involves:",
+    options: ["A. Isolated excessive clotting with no bleeding risk.", "B. Simultaneous widespread clotting and bleeding due to consumption of clotting factors.", "C. A benign, self-resolving condition requiring no treatment.", "D. Isolated bleeding with no clotting component."],
+    answer: "B", explanation: "DIC is a complex, life-threatening condition where widespread activation of the clotting cascade consumes platelets and clotting factors, leading paradoxically to both excessive clotting (microthrombi) and severe bleeding, often triggered by sepsis, trauma, or obstetric complications."
+  },
+  {
+    id: 250, subject: "Anatomy & Physiology", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "The primary function of platelets (thrombocytes) in the blood is to:",
+    options: ["A. Transport oxygen.", "B. Fight infection.", "C. Assist in blood clotting.", "D. Regulate blood pH."],
+    answer: "C", explanation: "Platelets play a critical role in hemostasis by aggregating at sites of vascular injury and forming a platelet plug, initiating the clotting cascade to stop bleeding."
+  },
+  {
+    id: 251, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with type 2 diabetes is prescribed metformin. The nurse should hold this medication before procedures involving IV contrast dye because:",
+    options: ["A. It can cause hypoglycemia during the procedure.", "B. It increases the risk of lactic acidosis, especially with contrast-induced renal impairment.", "C. It interferes with the contrast dye's imaging quality.", "D. It has no interaction with contrast dye."],
+    answer: "B", explanation: "Metformin is typically held before and for 48 hours after procedures using iodinated IV contrast dye, as contrast can cause transient renal impairment, and reduced clearance of metformin increases the risk of life-threatening lactic acidosis."
+  },
+  {
+    id: 252, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client newly diagnosed with type 1 diabetes asks why they need insulin instead of oral medications. The nurse's best explanation is that type 1 diabetes involves:",
+    options: ["A. Insulin resistance only, which oral agents can address.", "B. Little to no insulin production due to autoimmune destruction of pancreatic beta cells, requiring exogenous insulin replacement.", "C. Excess insulin production.", "D. A condition that resolves without treatment."],
+    answer: "B", explanation: "Type 1 diabetes results from autoimmune destruction of the insulin-producing beta cells in the pancreas, leading to little or no endogenous insulin production. Because oral hypoglycemic agents largely work by improving insulin sensitivity or stimulating existing beta cells, they are ineffective, and clients require exogenous insulin for survival."
+  },
+  {
+    id: 253, subject: "Medical-Surgical Nursing", topic: "Musculoskeletal",
+    year: "NMCN Review", question: "A client following a below-the-knee amputation reports feeling like the amputated foot is still there and painful. The nurse recognizes this as:",
+    options: ["A. Phantom limb sensation/pain, a common and real phenomenon.", "B. A sign of psychiatric illness.", "C. Evidence of poor wound healing.", "D. An indication that the amputation was unnecessary."],
+    answer: "A", explanation: "Phantom limb sensation and phantom limb pain are common, real neurological phenomena following amputation, believed to result from the brain's continued neural representation of the missing limb. The nurse should validate the client's experience and provide appropriate pain management, not dismiss it."
+  },
+  {
+    id: 254, subject: "Medical-Surgical Nursing", topic: "Integumentary",
+    year: "NMCN Review", question: "A client presents with clusters of small, painful vesicles on an erythematous base following a dermatomal (band-like) pattern on the trunk. The nurse suspects:",
+    options: ["A. Contact dermatitis", "B. Herpes zoster (shingles)", "C. Impetigo", "D. Psoriasis"],
+    answer: "B", explanation: "Herpes zoster (shingles), caused by reactivation of the varicella-zoster virus, classically presents as painful vesicular lesions in a unilateral, dermatomal distribution, reflecting the affected sensory nerve root."
+  },
+  {
+    id: 255, subject: "Medical-Surgical Nursing", topic: "Hematologic/Immune",
+    year: "NMCN Review", question: "A client is diagnosed with polycythemia vera. The PRIORITY nursing concern is the increased risk for:",
+    options: ["A. Excessive bleeding due to low platelet count.", "B. Thrombosis due to increased blood viscosity.", "C. Severe anemia.", "D. Hypoglycemia."],
+    answer: "B", explanation: "Polycythemia vera causes an overproduction of red blood cells, increasing blood viscosity and significantly raising the risk of thrombosis (stroke, MI, DVT). Management often includes therapeutic phlebotomy to reduce red cell mass."
+  },
+  {
+    id: 256, subject: "Medical-Surgical Nursing", topic: "Renal/Genitourinary",
+    year: "NMCN Review", question: "A client is scheduled for peritoneal dialysis. The nurse should monitor the dialysate outflow for which finding, which would indicate peritonitis?",
+    options: ["A. Clear, pale yellow outflow.", "B. Cloudy, turbid outflow with abdominal pain and fever.", "C. Consistent outflow volume equal to inflow.", "D. Slightly pink-tinged outflow after the first exchange only."],
+    answer: "B", explanation: "Cloudy or turbid dialysate outflow, accompanied by abdominal pain, tenderness, and fever, is the classic sign of peritonitis, a serious complication of peritoneal dialysis requiring prompt treatment with antibiotics."
+  },
+  {
+    id: 257, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "A client with long-standing diabetes reports numbness and tingling in both feet in a stocking-glove distribution. The nurse recognizes this as:",
+    options: ["A. Diabetic nephropathy.", "B. Diabetic peripheral neuropathy.", "C. Diabetic retinopathy.", "D. A normal effect of aging unrelated to diabetes."],
+    answer: "B", explanation: "Diabetic peripheral neuropathy, a common microvascular complication of long-standing diabetes, causes numbness, tingling, and burning pain typically starting in the feet and progressing in a symmetric 'stocking-glove' distribution, increasing the risk for unnoticed foot injuries and ulcers."
+  },
+  {
+    id: 258, subject: "Medical-Surgical Nursing", topic: "Endocrine",
+    year: "NMCN Review", question: "As part of diabetic foot care teaching, the nurse should instruct the client to:",
+    options: ["A. Soak the feet in hot water daily.", "B. Inspect the feet daily for cuts, blisters, or redness, and wear well-fitting shoes.", "C. Walk barefoot at home to toughen the skin.", "D. Trim corns and calluses themselves with a razor blade."],
+    answer: "B", explanation: "Daily foot inspection is critical for diabetic clients due to peripheral neuropathy (reduced sensation) and impaired healing/circulation. Clients should never walk barefoot, should wear well-fitting shoes, and should have corns/calluses professionally treated rather than self-treating, which risks injury and infection."
+  },
 ];
 
 export const SUBJECTS = [...new Set(PAST_QUESTIONS.map(q => q.subject))];
