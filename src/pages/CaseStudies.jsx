@@ -60,7 +60,7 @@ Return ONLY valid JSON, no markdown:
       const res = await fetch(GROQ_API, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "llama-3.3-70b-versatile", messages: [{ role: "user", content: prompt }], max_tokens: 1500, temperature: 0.5 }),
+        body: JSON.stringify({ model: "openai/gpt-oss-120b", messages: [{ role: "user", content: prompt }], max_tokens: 1500, temperature: 0.5 }),
       });
       if (!res.ok) throw new Error("API error");
       const data = await res.json();
@@ -93,7 +93,7 @@ Be encouraging but clinically accurate.`;
       const res = await fetch(GROQ_API, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "llama-3.1-8b-instant", messages: [{ role: "user", content: prompt }], max_tokens: 600, temperature: 0.3 }),
+        body: JSON.stringify({ model: "openai/gpt-oss-20b", messages: [{ role: "user", content: prompt }], max_tokens: 600, temperature: 0.3 }),
       });
       const data = await res.json();
       setFeedback(p => ({ ...p, [stageKey]: data.choices?.[0]?.message?.content || "" }));

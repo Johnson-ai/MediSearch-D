@@ -21,8 +21,15 @@ const NAV_GROUPS = [
     links: [
       { path: "/quiz",           label: "Exam Quiz"       },
       { path: "/past-questions", label: "Past Questions"  },
+      { path: "/mock-exam",      label: "Mock Exam"       },
       { path: "/flashcards",     label: "Flashcards"      },
       { path: "/case-studies",   label: "Case Studies"    },
+    ]
+  },
+  {
+    label: "Clinical Tools",
+    links: [
+      { path: "/sbar", label: "SBAR Builder" },
     ]
   },
   {
@@ -70,32 +77,32 @@ export default function Navbar() {
 
         {/* Desktop nav — grouped dropdowns */}
         <div className="hidden lg:flex items-center gap-1">
-          {NAV_GROUPS.map(group => (
-            <div key={group.label} className="relative"
-              onMouseEnter={() => setActiveGroup(group.label)}
-              onMouseLeave={() => setActiveGroup(null)}>
-              <button className={`text-xs font-medium px-3 py-2 rounded-lg transition-colors ${
-                group.links.some(l => l.path === location.pathname)
-                  ? "text-blue-400 bg-blue-900/20"
-                  : "text-slate-500 hover:text-blue-300 hover:bg-blue-900/10"
-              }`}>
-                {group.label}
-              </button>
-              {activeGroup === group.label && group.links.length > 1 && (
-                <div className="absolute top-full left-0 mt-1 glass border border-blue-900/40 rounded-xl overflow-hidden shadow-xl min-w-40">
-                  {group.links.map(link => (
-                    <Link key={link.path} to={link.path}
-                      className={`block px-4 py-2.5 text-xs transition-colors ${location.pathname === link.path ? "text-blue-400 bg-blue-900/20" : "text-slate-400 hover:text-white hover:bg-blue-900/20"}`}>
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-              {activeGroup === group.label && group.links.length === 1 && (
-                <Link to={group.links[0].path} />
-              )}
-            </div>
-          ))}
+          {NAV_GROUPS.map(group => {
+            const isActive = group.links.some(l => l.path === location.pathname);
+            const linkClass = `text-xs font-medium px-3 py-2 rounded-lg transition-colors ${
+              isActive ? "text-blue-400 bg-blue-900/20" : "text-slate-500 hover:text-blue-300 hover:bg-blue-900/10"
+            }`;
+
+            return (
+              <div key={group.label} className="relative"
+                onMouseEnter={() => setActiveGroup(group.label)}
+                onMouseLeave={() => setActiveGroup(null)}>
+                <button className={linkClass}>
+                  {group.label}
+                </button>
+                {activeGroup === group.label && (
+                  <div className="absolute top-full left-0 mt-1 glass border border-blue-900/40 rounded-xl overflow-hidden shadow-xl min-w-40">
+                    {group.links.map(link => (
+                      <Link key={link.path} to={link.path}
+                        className={`block px-4 py-2.5 text-xs transition-colors ${location.pathname === link.path ? "text-blue-400 bg-blue-900/20" : "text-slate-400 hover:text-white hover:bg-blue-900/20"}`}>
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Damilare badge */}
