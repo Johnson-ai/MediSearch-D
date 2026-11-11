@@ -285,3 +285,50 @@ img,svg,video,canvas{max-width:100%}
   animation-duration:.01ms!important;animation-iteration-count:1!important;
   transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+/* Homepage anatomy preview: a selected marker must show a visible result on phones.
+   Preserve the desktop illustration but display a cropped, larger touch diagram
+   plus accessible, independently clickable organ controls on narrow screens. */
+.home-atlas-mobile-controls{display:none!important}
+.anatomy-hit-area{cursor:pointer}
+@media(max-width:760px){
+ .home-atlas-inner{gap:24px}
+ .home-atlas-copy .home-atlas-part{display:none}
+ .home-atlas-copy .primary-button{margin-top:19px}
+ .home-atlas-device{max-width:480px;overflow:hidden;transform:none!important}
+ .home-atlas-device-top,.home-atlas-device-bottom{position:static;left:auto;right:auto;
+   padding:18px 17px 0;font-size:10px;letter-spacing:.55px}
+ .home-atlas-device-bottom{padding:0 17px 13px;flex-wrap:wrap;line-height:1.6}
+ .home-atlas-device .anatomy-svg{display:block;width:100%;height:auto;
+   margin:5px auto 0;padding:0 7px;max-height:none;touch-action:manipulation}
+ .home-atlas-mobile-controls{display:block!important;padding:20px 15px 18px;
+   border-top:1px solid #d7e8f3;background:#f7fbfe;position:relative;z-index:3}
+ .home-atlas-mobile-hint{font-size:13px;line-height:1.5;color:#345e7a;font-weight:800;margin:0 0 12px}
+ .home-atlas-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .home-atlas-choice{min-height:48px;padding:11px 10px;border:1px solid #c4dce9;border-radius:10px;
+   color:#285b7e;background:white;font:700 13px/1.35 'DM Sans',Arial,sans-serif;
+   text-align:center;cursor:pointer;touch-action:manipulation;overflow-wrap:anywhere}
+ .home-atlas-choice.is-selected{background:#226f9e;border-color:#226f9e;color:white;
+   box-shadow:0 3px 11px #2b71972b}
+ .home-atlas-choice:focus-visible{outline:3px solid #164c73;outline-offset:2px}
+ .home-atlas-mobile-detail{display:block!important;margin-top:17px;padding:18px 16px;
+   border:1px solid #b9d8ea;border-left:4px solid #287dad;border-radius:12px;
+   background:#fff;scroll-margin-top:92px;box-shadow:0 8px 25px #20577e0b}
+ .home-atlas-mobile-detail>span{color:#487d9e;font-size:10px;font-weight:800;letter-spacing:1px}
+ .home-atlas-mobile-detail>strong{display:block;margin:8px 0 10px;color:#154466;
+   font:600 25px/1.2 'Playfair Display',Georgia,serif}
+ .home-atlas-mobile-detail>p{color:#416985;line-height:1.65;font-size:14px}
+ .home-atlas-mobile-detail .atlas-teaser-tags{margin-top:13px;gap:7px}
+ .home-atlas-mobile-detail .atlas-teaser-tags span{font-size:11px;line-height:1.4;padding:8px 10px}
+ .home-atlas-conditions{border-top:1px solid #e1ecf3;margin-top:17px;padding-top:15px}
+ .home-atlas-conditions>span{display:block;font-size:10px;color:#487d9e;letter-spacing:1px;font-weight:800}
+ .home-atlas-conditions>p{font-size:13px;line-height:1.6;color:#345c75;margin-top:8px}
+ .home-atlas-mobile-disclaimer{font-size:11px;color:#627d91;line-height:1.6;margin-top:13px}
+ .home-atlas-mobile-atlas-link{display:flex;align-items:center;justify-content:center;min-height:48px;
+   padding:12px;border-radius:10px;margin-top:15px;text-decoration:none;
+   background:#e2f1fa;color:#145780;font-size:13px;font-weight:800;gap:8px}
+}
+@media(max-width:360px){
+ .home-atlas-choice-grid{grid-template-columns:1fr}
+ .home-atlas-device-top,.home-atlas-device-bottom{font-size:9px}
+}

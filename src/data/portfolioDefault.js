@@ -15,7 +15,7 @@ export const defaultPortfolio = {
     studyFeatureDescription: 'Explore clinical study notes, nursing examinations, flashcards, medical references and study tools.',
     contactHeading: "Let's connect.", contactIntro: 'For professional inquiries, collaboration or a conversation.',
     contactMessage: 'Open to meaningful connections.',
-    valuesStrip: 'HEALTHCARE | LEARNING | COMPASSION | PROFESSIONAL GROWTH',
+    valuesStrip: '', // Retained in the data schema for existing CMS records; no longer displayed.
     showContact: true, showStudy: true,
     seoTitle: 'Abigael Akossou | Professional Portfolio',
     seoDescription: 'Portfolio and nursing study resources of Abigael Akossou.'

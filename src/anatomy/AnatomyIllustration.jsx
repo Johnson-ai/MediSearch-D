@@ -55,11 +55,11 @@ function AnatomicalForm({view}) {
   </g>;
 }
 
-export default function AnatomyIllustration({view='front', points=[], selectedId, onSelect, showLabels=true, className=''}) {
+export default function AnatomyIllustration({view='front', points=[], selectedId, onSelect, showLabels=true, className='', viewport='0 0 650 1030', largeTargets=false}) {
  const arrange = side => points.filter(part=>part.side===side).sort((a,b)=>a.y-b.y).map((part,i,arr)=>({part,labelY:arr.length===1 ? part.y : 96 + i*(873/Math.max(1,arr.length-1))}));
  const arranged=[...arrange('left'),...arrange('right')];
  const activate=(event,part)=>{if(event.type==='keydown' && event.key!=='Enter' && event.key!==' ')return; event.preventDefault(); onSelect?.(part.id);};
- return <svg className={`anatomy-svg ${className}`} viewBox="0 0 650 1030" role="img" aria-label={`Interactive ${view} human body diagram with ${points.length} labelled selectable structures`}>
+ return <svg className={`anatomy-svg ${className}`} viewBox={viewport} role="img" aria-label={`Interactive ${view} human body diagram with ${points.length} labelled selectable structures`}>
    <title>{view === 'front' ? 'Anterior human anatomy' : 'Posterior human anatomy'}</title>
    <AnatomicalForm view={view}/>
    {arranged.map(({part,labelY})=>{
@@ -71,7 +71,8 @@ export default function AnatomyIllustration({view='front', points=[], selectedId
        <rect x={isLeft?9:486} y={labelY-16} width="156" height="32" rx="7" fill="transparent"/>
        <text className="anatomy-label" x={endX} y={labelY+4} textAnchor={isLeft?'start':'end'}>{part.name}</text>
       </>}
-      <circle className="anatomy-halo" cx={part.x} cy={part.y} r={isActive?20:14}/><circle className="anatomy-target" cx={part.x} cy={part.y} r="7.5"/><circle cx={part.x} cy={part.y} r="2.2" fill="#fff" pointerEvents="none"/>
+      {largeTargets && <circle className="anatomy-hit-area" cx={part.x} cy={part.y} r="25" fill="transparent" pointerEvents="all"/>}
+      <circle className="anatomy-halo" cx={part.x} cy={part.y} r={isActive?20:14} pointerEvents={largeTargets ? "none" : undefined}/><circle className="anatomy-target" cx={part.x} cy={part.y} r="7.5" pointerEvents={largeTargets ? "none" : undefined}/><circle cx={part.x} cy={part.y} r="2.2" fill="#fff" pointerEvents="none"/>
      </g>;
    })}
    <text x="325" y="1016" textAnchor="middle" className="anatomy-svg-caption">SCHEMATIC · NOT TO SCALE · {view==='front'?'ANTERIOR':'POSTERIOR'} VIEW</text>

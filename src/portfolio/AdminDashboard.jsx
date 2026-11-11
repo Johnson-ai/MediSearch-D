@@ -25,7 +25,7 @@ const labels = {
  location:'Location',email:'Public contact email',telephone:'Telephone',linkedin:'LinkedIn (https URL)',website:'Website (https URL)',
  portraitUrl:'Portrait image URL',cvUrl:'CV PDF (upload or HTTPS URL)',heroNote:'Photo card caption',footerLine:'Footer description',
  studyFeatureTitle:'Study feature heading',studyFeatureDescription:'Study feature description',contactHeading:'Contact page heading',
- contactIntro:'Contact page intro',contactMessage:'Contact message',valuesStrip:'Values strip (terms separated by |)',
+ contactIntro:'Contact page intro',contactMessage:'Contact message',
  showContact:'Show public contact information',showStudy:'Show Study navigation',seoTitle:'Browser title / SEO',
  seoDescription:'Search description',title:'Title / milestone',organisation:'Organisation / institution (optional)',
  period:'Date range / period (optional)',month:'Month / year (required for journal updates)',category:'Update category',
@@ -33,7 +33,7 @@ const labels = {
  functions:'Functions (separate with |)',conditions:'Conditions (separate with |)'
 };
 const siteFieldGroups = {
- site: ['name','shortName','eyebrow','headline','location','email','telephone','linkedin','website','portraitUrl','cvUrl','heroNote','footerLine','studyFeatureTitle','studyFeatureDescription','contactHeading','contactIntro','contactMessage','valuesStrip','showContact','showStudy','seoTitle','seoDescription'],
+ site: ['name','shortName','eyebrow','headline','location','email','telephone','linkedin','website','portraitUrl','cvUrl','heroNote','footerLine','studyFeatureTitle','studyFeatureDescription','contactHeading','contactIntro','contactMessage','showContact','showStudy','seoTitle','seoDescription'],
  about: ['aboutHeading','about','role','intro']
 };
 const longFields=new Set(['intro','about','description','heroNote','seoDescription','studyFeatureDescription','contactIntro','functions','conditions']);
