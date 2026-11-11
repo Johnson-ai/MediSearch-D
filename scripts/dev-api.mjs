@@ -14,6 +14,8 @@ const routes = {
  '/api/auth/logout':'auth/logout.js',
  '/api/admin/content':'admin/content.js',
  '/api/admin/media':'admin/media.js',
+ '/api/admin/diary':'admin/diary.js',
+ '/api/admin/diary/media':'admin/diary/media.js',
  '/api/study/progress':'study/progress.js',
  '/api/study/attempt':'study/attempt.js'
 };

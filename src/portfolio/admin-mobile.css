@@ -1,0 +1,47 @@
+/* Fix the old fixed-viewport/nested-scroll editor on touch devices.
+   Desktop retains a fixed sidebar and an independently scrolling content pane. */
+@media(min-width:761px){
+ .admin-dashboard{height:100dvh;min-height:0;overflow:hidden}
+ .admin-sidebar{height:100%;overflow-y:auto;overscroll-behavior:contain}
+ .admin-main{height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+ .admin-bottom-actions{position:static}
+}
+@media(max-width:760px){
+ html:has(.admin-dashboard),body:has(.admin-dashboard),#root:has(.admin-dashboard){height:auto;min-height:100%;overflow-x:clip;overflow-y:visible}
+ .admin-root{min-width:0;overflow-x:clip}
+ .admin-dashboard{display:block!important;height:auto!important;min-height:100dvh!important;overflow:visible!important}
+ .admin-sidebar{position:sticky;top:0;z-index:55;display:block;width:100%;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;padding:10px 16px!important;background:#fff;box-shadow:0 4px 16px #183a5010;border-right:0}
+ .admin-identity{margin-bottom:8px;padding:0!important}
+ .admin-mobile-select{display:block!important;min-height:48px;width:100%;margin:0!important;background:#f7fbfd;border:1px solid #cddfea;border-radius:8px;font-size:16px;color:#1c587f;padding:10px 12px}
+ .admin-sidebar nav,.admin-sidebar-bottom,.admin-nav-caption{display:none!important}
+ .admin-main{height:auto!important;min-height:0!important;overflow:visible!important;max-height:none!important;display:block!important}
+ .admin-topline{position:static!important;min-height:0;display:flex;justify-content:flex-end;padding:9px 16px;background:#fff;border-bottom:1px solid #e4ebf1}
+ .admin-topline>span{display:none}
+ .admin-actions{width:100%;justify-content:space-between;min-width:0;gap:8px}
+ .admin-actions .admin-mobile-signout{display:inline-flex!important;min-height:44px;align-items:center;white-space:nowrap;font-size:12px}
+ .admin-actions .admin-preview{min-height:44px;font-size:12px;padding:8px 4px;max-width:none}
+ .admin-actions .primary-button{display:none}
+ .admin-content{padding:24px 16px calc(120px + env(safe-area-inset-bottom));min-width:0;max-width:100%}
+ .admin-page-title h1{font-size:clamp(28px,8vw,39px);line-height:1.16;overflow-wrap:anywhere}
+ .admin-page-title>p:last-child{font-size:13px;line-height:1.7}
+ .admin-form-panel{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding:16px;min-width:0}
+ .admin-form-panel>div:has(textarea){grid-column:auto}
+ .admin-row-fields{display:grid;grid-template-columns:minmax(0,1fr);padding:0;gap:18px}
+ .admin-row-fields .admin-field:has(textarea){grid-column:auto}
+ .admin-row-card{padding:16px;min-width:0}
+ .admin-row-toolbar{align-items:flex-start;flex-wrap:wrap;gap:10px}
+ .admin-row-toolbar>div{gap:7px;flex-wrap:wrap}
+ .admin-row-toolbar button{min-height:44px;min-width:40px;padding:8px 10px;border-radius:6px;background:#f0f6fa}
+ .admin-field{min-width:0}
+ .admin-field :is(input,select,textarea){width:100%;min-width:0;max-width:100%;font-size:16px;min-height:46px}
+ .admin-field textarea{min-height:120px}
+ .admin-field :is(input,select,textarea){scroll-margin-top:140px}
+ .admin-anatomy-editor{min-width:0}
+ .admin-bottom-actions{position:fixed!important;left:0;right:0;bottom:0;z-index:65;margin:0!important;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#ffffffed;border-top:1px solid #dce7f0;backdrop-filter:blur(16px);box-shadow:0 -8px 24px #173c5912}
+ .admin-bottom-actions .primary-button{width:100%;min-height:49px;white-space:normal}
+ .admin-content:has(.diary-shell){padding-bottom:42px}
+ .admin-content:has(.diary-shell) .admin-bottom-actions{display:none}
+ .upload-bar{flex-wrap:wrap;min-width:0}
+ .upload-bar a{overflow-wrap:anywhere}
+}
+@media (prefers-reduced-motion:reduce){.admin-root *, .diary-shell *{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}

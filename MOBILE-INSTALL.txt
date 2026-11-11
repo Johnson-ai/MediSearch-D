@@ -1,0 +1,52 @@
+ABIGAEL AKOSSOU — MOBILE RESPONSIVENESS PATCH
+==============================================
+
+This is a drop-in UI-only patch for the currently deployed MediSearch-D repository.
+It does not change your .git, .env, .env.local, Supabase data, Groq configuration,
+API routes, or Vercel settings.
+
+WHAT CHANGED
+------------
+- Responsive public header and accessible mobile drawer, with backdrop and Escape
+  handling; CV download stays accessible from the mobile navigation.
+- Better scaling for the home hero, floating medical cards, monthly journal,
+  About, contact, CV, and footer at 320px through tablet widths.
+- Collapsible Study tool menu, one group at a time.
+- Native searchable anatomy picker for phones, with a jump to the corresponding
+  structure details. The original interactive diagram remains intact.
+- Larger tap targets, iOS-safe input font sizes, safe-area padding, reduced-motion
+  handling, and horizontal-overflow protections.
+- Mobile/tablet admin CMS: section selector stays visible while editor scrolls;
+  forms collapse to one column, and Publish remains reachable at the bottom.
+- Mock exam question grid uses fewer columns on phones.
+
+INSTALL IN YOUR EXISTING PROJECT
+--------------------------------
+1) Stop npm run dev with Control + C.
+2) Open Terminal in your existing MediSearch-D-main directory.
+3) Make sure git status --short is empty, so your earlier edits aren't lost.
+4) Extract this ZIP into that SAME folder, replacing matching source files:
+
+   unzip -o "$HOME/Downloads/MediSearch-Mobile-Responsive-Patch.zip" -d .
+
+5) Run:
+   npm test
+   npm run build
+   npm run dev
+
+6) Check mobile sizes in Chrome: right-click -> Inspect -> Toggle device toolbar.
+   Use widths 320, 375, 390, 430, 768, and 1024 px.
+   Inspect /, /about, /cv, /progress, /study, /study/anatomy,
+   /study/mock-exam and /admin.
+
+7) If the build and layouts look correct, commit and deploy normally:
+   git add src/portfolio/SiteHeader.jsx src/components/Navbar.jsx \
+     src/anatomy/AnatomyAtlas.jsx src/pages/MockExam.jsx \
+     src/portfolio/PortfolioHome.jsx src/main.jsx src/responsive.css \
+     tests/mobile-responsive.test.mjs
+   git commit -m "Improve mobile experience across portfolio Study and CMS"
+   git push origin main
+
+No database migration, new npm package, or Vercel env variable is required.
+If the live site continues to show old styling, refresh it, then try a hard
+refresh. The browser may have cached an earlier client asset.
