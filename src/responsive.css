@@ -1,0 +1,287 @@
+/* Mobile and touch refinements for the portfolio, Study and CMS.
+   Loaded after the existing visual themes so desktop design remains unchanged. */
+
+/* Avoid horizontal bleed from large medical art, long user-entered text or grids. */
+.site-root,.admin-root,.main-area,.site-container,.study-shell,.study-tool-content,
+.portfolio-detail,.portfolio-home,.anatomy-page{min-width:0}
+.site-root,.portfolio-detail,.portfolio-home,.anatomy-page{overflow-x:clip}
+.site-container>*{min-width:0}
+img,svg,video,canvas{max-width:100%}
+.site-root h1,.site-root h2,.site-root h3,.site-root p,.site-root a,
+.admin-root p,.admin-root h1,.admin-root h2,.admin-root h3{overflow-wrap:break-word}
+.site-root a,.admin-root a{-webkit-tap-highlight-color:transparent}
+.site-root :is(a,button,input,textarea,select):focus-visible,
+.admin-root :is(a,button,input,textarea,select):focus-visible{
+ outline:3px solid #2b82c7;outline-offset:3px;
+}
+.skip-to-content{position:absolute;left:12px;top:-90px;background:#fff;color:#155789;border:2px solid #257db6;
+  border-radius:8px;padding:13px 18px;z-index:400;font-size:14px;font-weight:700}
+.skip-to-content:focus{top:9px}
+
+/* A navigable, scroll-contained touch menu instead of a page-length expansion. */
+.site-header{isolation:isolate}
+.site-header-inner{position:relative;z-index:4;min-width:0}
+.brand{min-width:0}.brand>span:last-child{min-width:0;overflow-wrap:normal}
+.site-header-actions{flex-shrink:0}
+.site-menu-button{height:44px;min-width:44px;display:none;align-items:center;justify-content:center;
+  border:1px solid #d6e6f0;background:#f5faff;border-radius:11px;line-height:1;
+  font-size:24px;font-weight:400;touch-action:manipulation}
+.site-menu-button:active{background:#e8f4fc}
+.site-menu-backdrop{position:fixed;inset:78px 0 0;z-index:1;background:#122a4090;border:0;width:100vw}
+.site-mobile-nav{position:absolute;top:100%;left:0;right:0;z-index:3;background:#fff;
+  padding:12px max(24px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom));
+  max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;box-shadow:0 25px 36px #0c2c4930}
+.site-mobile-nav>a,.site-mobile-extra>a{display:flex;align-items:center;min-height:48px;padding:11px 5px;
+  border-bottom:1px solid #e9f0f5;text-decoration:none;font-size:14px;font-weight:600;color:#345b77}
+.site-mobile-nav a.site-active{color:#16689f;background:#f0f8fd;border-radius:6px;padding-left:12px}
+.site-mobile-extra{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;margin-top:4px}
+.site-mobile-extra>a{font-size:13px}
+.site-mobile-download{margin-top:20px}
+.site-mobile-download>a,.site-mobile-download>.cv-disabled{width:100%;min-height:48px;justify-content:center}
+
+/* Adjustable cards, text and touch controls. */
+@media(hover:none),(pointer:coarse){
+ .portfolio-home .home-directory-card:hover,.portfolio-detail .progress-card:hover,
+ .portfolio-detail .medical-entry-card:hover,.home-atlas-device:hover,
+ .med-hero-stage,.med-portrait-shell{transform:none!important}
+ .site-root :is(.primary-button,.secondary-button,.study-mobile-toggle,.site-menu-button){min-height:44px}
+ .site-root :is(button,select){touch-action:manipulation}
+ .site-root :is(button,a){-webkit-tap-highlight-color:transparent}
+ .anatomy-hotspot{touch-action:manipulation}
+}
+
+@media(max-width:1110px){
+ .site-menu-button{display:inline-flex}
+ .site-mobile-nav{display:flex;flex-direction:column}
+ .header-cv-action{display:inline-flex;min-width:0}
+}
+
+@media(max-width:960px){
+ /* Tablet CMS: the section selector stays visible while the editor scrolls. */
+ .admin-dashboard{height:100vh;height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+ .admin-sidebar{width:100%;height:auto;min-height:0;max-height:none;overflow:visible;
+  flex:0 0 auto;padding:10px 18px 12px;border-right:0;border-bottom:1px solid #dce8f0}
+ .admin-identity{padding:0 0 5px;gap:10px}
+ .admin-identity .brand-mark{width:30px;height:30px;flex-basis:30px;font-size:22px}
+ .admin-identity strong{font-size:13px}.admin-identity small{font-size:10px}
+ .admin-mobile-select{display:block;width:100%;min-height:44px;margin-top:8px;background:#f8fbfe;
+  border:1px solid #cedfea;border-radius:9px;padding:10px 12px;color:#225b83;font-size:16px}
+ .admin-nav-caption,.admin-sidebar nav,.admin-sidebar-bottom{display:none}
+ .admin-main{height:auto;min-height:0;overflow-y:auto;flex:1 1 auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch}
+ .admin-topline{position:sticky;top:0;min-height:62px;padding:9px 18px;z-index:35;gap:8px}
+ .admin-topline>span{display:none}
+ .admin-content{padding:26px 18px 110px}
+ .admin-mobile-signout{display:inline-flex!important;align-items:center;min-height:44px}
+ .admin-actions{gap:12px;justify-content:flex-end}
+ .admin-actions>button{min-height:44px}
+}
+
+
+@media(max-width:900px) and (min-width:761px){
+ /* A portrait iPad is too narrow for the original two-column animated hero. */
+ .portfolio-hero-grid{grid-template-columns:1fr;min-height:0;gap:22px;padding-block:45px 90px}
+ .hero-copy{max-width:680px}
+ .hero-copy h1{font-size:clamp(54px,8vw,78px)}
+ .hero-visual{width:100%;max-width:580px;margin:0 auto}
+ .home-atlas-inner{grid-template-columns:1fr;gap:32px}
+ .home-atlas-device{max-width:560px;margin:0 auto}
+ .section-heading{grid-template-columns:1fr;gap:15px}
+ .about-grid,.timeline-list,.skill-grid,.contact-panel{margin-left:0}
+ .study-feature-content>div:first-child{max-width:580px}
+ .study-feature-art{opacity:.2;pointer-events:none}
+}
+
+@media(max-width:760px){
+ :root{--mobile-gutter:18px}
+ html{scroll-padding-top:78px}
+ .site-container{width:calc(100% - var(--mobile-gutter)*2);max-width:none}
+ .site-header-inner{min-height:66px;height:66px;padding:0 var(--mobile-gutter);gap:8px}
+ .site-menu-backdrop{inset-block-start:66px}
+ .site-mobile-nav{max-height:calc(100dvh - 66px);padding-inline:var(--mobile-gutter)}
+ .brand{gap:9px;font-size:clamp(11.5px,3.35vw,15px);letter-spacing:-.25px}
+ .brand small{font-size:7px;letter-spacing:1.1px;margin-top:4px}
+ .brand-mark{height:32px;width:32px;flex:0 0 32px;border-radius:10px}
+ .site-header-actions{gap:7px}
+ .site-header-actions .cv-download-small{font-size:11px;padding:10px 12px;min-height:44px}
+ .site-header-actions .cv-download-small span{display:none}
+ .site-root .primary-button,.site-root .secondary-button{white-space:normal;text-align:center;max-width:100%;gap:12px;padding-inline:18px}
+ .hero-copy h1{font-size:clamp(43px,11.5vw,71px);line-height:1.09;letter-spacing:-1.6px;
+  overflow-wrap:anywhere}
+ .hero-copy h2{font-size:clamp(19px,5vw,25px)}
+ .hero-copy .hero-eyebrow{line-height:1.5}
+ .portfolio-hero-grid{padding-top:28px;padding-bottom:67px}
+ .hero-copy{padding-top:0}
+ .hero-intro{line-height:1.75}
+ .hero-actions{gap:10px;margin-top:24px}
+ .hero-bottom-meta{row-gap:12px;line-height:1.5}
+ .hero-visual{padding:0 8px 25px}
+ .med-hero-stage{max-width:100%;min-width:0}
+ .med-float-card-top{max-width:70%}
+ .med-float-card strong{overflow-wrap:anywhere}
+ .med-monitor-card{max-width:75%}
+ .med-hero-note{max-width:100%}
+ .hero-edge{font-size:8px;letter-spacing:1.2px}
+ .section-heading h2,.home-directory-header h2,.home-progress-header h2{font-size:clamp(30px,8.7vw,43px);letter-spacing:-.9px}
+ .home-directory-card{height:auto;min-height:190px}
+ .home-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .home-directory-card h3{font-size:clamp(21px,4.7vw,29px)}
+ .home-directory-card p{line-height:1.6}
+ .home-progress-section,.home-directory{padding-block:54px}
+ .study-feature h2{font-size:clamp(42px,9vw,58px)}
+ .study-feature-content{min-height:0}
+ .study-feature-content>div:first-child{padding:58px 0}
+ .study-feature-art{max-width:100%;pointer-events:none}
+ .inner-page-hero h1{font-size:clamp(40px,10.4vw,66px);line-height:1.12;overflow-wrap:anywhere}
+ .inner-page-description{line-height:1.7}
+ .inner-page-hero-content{padding-block:48px}
+ .about-page-layout,.contact-detail-layout,.cv-page-layout{padding-block:52px}
+ .about-page-portrait{min-height:0;aspect-ratio:4/4.5;max-width:100%}
+ .about-page-portrait img{width:100%;height:100%;object-fit:cover}
+ .profile-placeholder{min-height:0;height:100%}
+ .about-page-copy h2,.contact-detail-layout h2{font-size:clamp(28px,8vw,45px)}
+ .about-page-bio,.cv-resume-summary,.progress-description,.medical-entry-description{overflow-wrap:anywhere}
+ .detail-content{padding-block:49px}
+ .medical-entry-card,.progress-card{padding:22px;min-width:0}
+ .medical-entry-head{flex-wrap:wrap;gap:8px}
+ .progress-month-heading{flex-wrap:wrap}
+ .progress-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .progress-filters label,.progress-filters select{min-width:0;width:100%}
+ .progress-filters>span{grid-column:1/-1}
+ .progress-card-image{max-height:260px}
+ .contact-detail-cards a{min-width:0;min-height:80px;padding:18px}
+ .cv-resume-layout{padding-top:44px;padding-bottom:75px;gap:24px}
+ .cv-resume-profile{padding:24px}
+ .cv-resume-index{row-gap:7px;column-gap:7px}
+ .cv-resume-index a{min-height:44px;display:flex;align-items:center}
+ .cv-record-section{scroll-margin-top:85px}
+ .site-footer-inner{gap:32px}
+ .site-footer-meta nav{gap:4px 14px}
+ .site-footer-meta nav a{display:inline-flex;min-height:38px;align-items:center}
+ .study-landing-hero h1{font-size:clamp(38px,9vw,56px);overflow-wrap:anywhere}
+ .study-hero-buttons{display:flex;flex-wrap:wrap;gap:10px}
+ .study-catalog{padding-block:52px}
+ .study-card-links a{min-height:44px;display:flex;align-items:center}
+ .study-mobile-toggle{display:inline-flex;gap:10px;align-items:center;justify-content:space-between;
+  min-width:132px;border:1px solid #d9eaf3;border-radius:9px;padding:9px 12px;background:#f4faff;font-size:13px}
+ .study-subnav-inner{min-height:54px}
+ .study-mobile-menu{grid-template-columns:1fr;padding:8px var(--mobile-gutter) 16px;gap:0;
+  max-height:min(65dvh,570px);overscroll-behavior:contain;overflow-y:auto}
+ .study-mobile-group{border-bottom:1px solid #e3edf4}
+ .study-mobile-group-toggle{width:100%;min-height:48px;padding:10px 2px;font-weight:700;
+  color:#285b7e;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+ .study-mobile-group-links{display:flex;flex-direction:column;padding-bottom:9px}
+ .study-mobile-group-links a{min-height:44px;display:flex;align-items:center;justify-content:space-between;
+  gap:10px;font-size:13px;border-radius:7px;padding:9px 12px}
+ .study-mobile-group-links a.active{background:#eaf5fc;color:#145b93;font-weight:700}
+ .study-shell :is(input,select,textarea){max-width:100%;font-size:16px}
+ .study-shell button{min-height:40px}
+ .study-shell :is(h1,h2,h3,p){overflow-wrap:break-word}
+ .study-tool-content{overflow-x:clip}
+ .study-tool-content pre,.study-tool-content code{white-space:pre-wrap;overflow-wrap:anywhere}
+ .study-shell .result-section{max-width:100%;overflow-wrap:anywhere}
+ .study-shell .result-section :is(p,li){overflow-wrap:anywhere}
+ .study-shell .sticky.top-16{top:16px}
+ .study-shell .grid.grid-cols-8{grid-template-columns:repeat(5,minmax(0,1fr))}
+ /* Admin mobile: controls fit in a single column without horizontal scrolling. */
+ .admin-login-page{min-height:100vh;min-height:100dvh;padding:18px}
+ .admin-login-card{padding:26px 22px;width:100%;max-width:450px}
+ .admin-login-card h1{font-size:clamp(31px,8vw,40px)}
+ .admin-form-panel,.admin-row-fields{grid-template-columns:minmax(0,1fr);gap:18px;padding:19px}
+ .admin-row-fields{padding:0}
+ .admin-row-card{padding:18px}
+ .admin-row-toolbar{gap:12px;align-items:flex-start;flex-wrap:wrap}
+ .admin-row-toolbar>div{gap:8px;flex-wrap:wrap}
+ .admin-row-toolbar button{min-height:40px;padding:6px 8px}
+ .admin-page-title h1{font-size:clamp(29px,8vw,39px)}
+ .admin-field :is(input,select,textarea){font-size:16px;min-height:44px;max-width:100%}
+ .admin-checkbox{min-height:44px}
+ .admin-topline{padding:8px 16px}
+ .admin-actions{width:100%;justify-content:space-between;gap:8px}
+ .admin-actions .primary-button{font-size:12px;min-height:44px;padding:10px 12px}
+ .admin-actions .admin-preview{font-size:12px}
+ .admin-bottom-actions{position:sticky;bottom:0;z-index:20;background:linear-gradient(#f6f9fcbd,#f6f9fc 20%);
+  padding:14px 0 calc(12px + env(safe-area-inset-bottom));margin-top:20px}
+ .admin-bottom-actions .primary-button{min-height:48px;width:100%}
+ .admin-content{padding-inline:16px;padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+ .admin-empty,.admin-anatomy-editor{min-width:0}
+ .admin-anatomy-editor :is(input,textarea,select){max-width:100%;font-size:16px}
+ .upload-bar{display:flex;flex-wrap:wrap;gap:10px;min-width:0}
+ .upload-button{min-height:44px;display:inline-flex;align-items:center;max-width:100%}
+}
+
+@media(max-width:490px){
+ .site-container{width:calc(100% - 32px)}
+ .site-header-inner{padding-inline:14px}
+ .site-menu-button{min-width:42px;width:42px;height:44px}
+ .brand{font-size:clamp(11px,3.3vw,13px)}
+ .brand-mark{width:30px;height:30px;flex-basis:30px}
+ .site-header-actions .cv-download-small{padding-inline:9px;font-size:10px}
+ .home-directory-grid,.skill-grid{grid-template-columns:1fr}
+ .home-directory-card{min-height:0;padding:22px}
+ .hero-actions{display:grid;grid-template-columns:1fr;align-items:stretch}
+ .hero-actions>*{width:100%;justify-content:space-between}
+ .med-hero-stage{height:clamp(300px,97vw,390px)}
+ .med-float-card-top{right:-2px}
+ .med-monitor-card{bottom:0;left:0}
+ .progress-filters{grid-template-columns:1fr}
+ .progress-month{padding-left:19px}
+ .progress-month-dot{left:-28px}
+ .progress-card h3{font-size:19px}
+ .cv-resume-profile{padding:20px}
+ .cv-resume-intro{padding:23px 20px}
+ .cv-record-heading{gap:10px}
+ .cv-record-grid .medical-entry-card{padding:18px}
+ .contact-detail-cards a{grid-template-columns:minmax(0,1fr) 18px}
+ .study-mobile-menu{padding-inline:16px}
+ .study-mobile-group-links a{min-height:46px}
+ .site-footer-meta nav a{min-height:44px}
+}
+
+@media(max-width:365px){
+ /* Put the CV action in the open menu: keep the long professional name legible. */
+ .header-cv-action{display:none}
+ .site-menu-button{width:44px;flex:0 0 44px}
+ .brand{font-size:11.8px}
+ .site-mobile-extra{grid-template-columns:1fr}
+ .hero-copy h1{font-size:clamp(39px,12vw,47px)}
+ .inner-page-hero h1{font-size:clamp(38px,11vw,44px)}
+ .hero-edge span:last-child{display:none}
+ .admin-topline .admin-preview{max-width:83px;line-height:1.2}
+}
+
+/* Atlas is an illustrated learning tool, but labels are hard to tap at phone scale.
+   Provide a native accessible picker and keep selected details within easy reach. */
+.atlas-mobile-picker{display:none}
+@media(max-width:790px){
+ .atlas-main-grid>*{min-width:0}
+ .atlas-figure-card,.atlas-detail-card{min-width:0}
+ .atlas-detail-card{scroll-margin-top:82px}
+ .atlas-toolbar :is(input,select){font-size:16px;min-height:44px}
+ .atlas-search{min-width:0}
+ .atlas-figure-top{gap:9px;flex-wrap:wrap}
+ .atlas-view-switch button{min-height:44px;min-width:65px}
+ .atlas-mobile-picker{display:grid;gap:8px;margin:10px 17px 4px;padding:15px;
+   border:1px solid #d3e8f5;background:#f5fbff;border-radius:10px}
+ .atlas-mobile-picker label{font-weight:700;color:#2e668c;font-size:13px}
+ .atlas-mobile-picker select{min-height:46px;width:100%;font-size:16px;padding:8px 10px;
+   border:1px solid #a9cce3;background:#fff;border-radius:8px;color:#173e5d}
+ .atlas-mobile-picker a{min-height:44px;display:inline-flex;align-items:center;font-weight:700;font-size:12px;color:#1d6da6}
+ .atlas-diagram{overflow:hidden;max-width:100%}
+ .atlas-diagram svg{display:block;width:100%;height:auto}
+ .atlas-figure-footer{flex-wrap:wrap;gap:10px}
+ .atlas-detail{padding:22px}
+ .atlas-detail h2{font-size:clamp(33px,9vw,45px)}
+ .atlas-structure-row{min-height:52px}
+ .atlas-structure-row small{white-space:normal;text-align:right}
+}
+
+/* Honor operating system motion preferences, including the CSS/SVG ECG animation. */
+@media(prefers-reduced-motion:reduce){
+ html:focus-within{scroll-behavior:auto}
+ .portfolio-home .motion-reveal{opacity:1!important;transform:none!important}
+ .site-root :is(*,*::before,*::after),.admin-root :is(*,*::before,*::after){
+  animation-duration:.01ms!important;animation-iteration-count:1!important;
+  transition-duration:.01ms!important;scroll-behavior:auto!important}
+}

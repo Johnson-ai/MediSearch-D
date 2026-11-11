@@ -267,7 +267,7 @@ export default function MockExam() {
           {/* Question grid overlay */}
           {showNav && (
             <div className="mt-5 glass border border-blue-900/30 rounded-2xl p-4 animate-fade-in">
-              <div className="grid grid-cols-8 sm:grid-cols-10 gap-2 mb-3">
+              <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 mb-3">
                 {examQuestions.map((qq, i) => {
                   const isAnswered = userAnswers[qq.id] !== undefined;
                   const isFlagged = flagged[qq.id];

@@ -8,7 +8,7 @@ const Arrow = ({diagonal=false}) => <span aria-hidden="true">{diagonal ? '↗' :
 const Heartbeat = ({className=''}) => <svg className={className} viewBox="0 0 280 72" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path className="med-ecg-line" d="M1 39H58L72 39L83 17L96 58L108 27L119 39H163L176 39L187 18L200 58L211 30L225 39H279"/></svg>;
 function ClinicalPortrait({site:s}) {
  const ref=useRef(null);
- const tilt=e=>{if(!ref.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;const b=ref.current.getBoundingClientRect();ref.current.style.setProperty('--tilt-x',`${(0.5-(e.clientY-b.top)/b.height)*9}deg`);ref.current.style.setProperty('--tilt-y',`${((e.clientX-b.left)/b.width-0.5)*10}deg`)};
+ const tilt=e=>{if(!ref.current || e.pointerType!=='mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;const b=ref.current.getBoundingClientRect();ref.current.style.setProperty('--tilt-x',`${(0.5-(e.clientY-b.top)/b.height)*9}deg`);ref.current.style.setProperty('--tilt-y',`${((e.clientX-b.left)/b.width-0.5)*10}deg`)};
  const reset=()=>{ref.current?.style.setProperty('--tilt-x','0deg');ref.current?.style.setProperty('--tilt-y','0deg')};
  return <div className="med-hero-stage" ref={ref} onPointerMove={tilt} onPointerLeave={reset}>
    <div className="med-stage-halo" aria-hidden="true"/><div className="med-stage-orbit med-orbit-one" aria-hidden="true"/><div className="med-stage-orbit med-orbit-two" aria-hidden="true"/>
