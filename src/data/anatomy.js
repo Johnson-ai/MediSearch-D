@@ -1,0 +1,60 @@
+// Selected major structures; schematic positions, not a clinical anatomy atlas.
+// Source links in the UI: NIH MedlinePlus Anatomy and Health Topics.
+const part = (id, name, system, view, x, y, side, description, functions, conditions) => ({
+  id, name, system, view, x, y, side, description, functions, conditions
+});
+
+export const anatomyParts = [
+  part('brain','Brain','Nervous','front',323,101,'left','The central organ of the nervous system, protected by the skull.','Integrates sensation | Coordinates movement | Supports memory, language and thinking','Stroke | Epilepsy | Brain tumours'),
+  part('eyes','Eyes','Sensory','front',345,140,'right','Paired organs that convert light into nerve signals for vision.','Detect light and colour | Support depth perception | Guide visual orientation','Cataracts | Glaucoma | Conjunctivitis'),
+  part('ears','Ears','Sensory','front',273,146,'left','Structures of the outer, middle and inner ear.','Hearing | Balance | Detecting head movement','Otitis media | Hearing loss | Ménière disease'),
+  part('thyroid','Thyroid gland','Endocrine','front',324,205,'right','A butterfly-shaped gland in the front of the neck.','Produces thyroid hormones | Regulates metabolism | Supports growth and temperature regulation','Hypothyroidism | Hyperthyroidism | Thyroid nodules'),
+  part('trachea','Trachea','Respiratory','front',324,237,'left','The windpipe, linking the larynx to the main bronchi.','Conducts air to lungs | Helps trap and clear particles','Tracheitis | Tracheal stenosis'),
+  part('right-lung','Right lung','Respiratory','front',291,290,'left','The lung on the anatomical right (shown on the viewer’s left).','Oxygenates blood | Removes carbon dioxide | Helps regulate blood pH','Pneumonia | Asthma | Chronic obstructive pulmonary disease'),
+  part('left-lung','Left lung','Respiratory','front',359,291,'right','The lung on the anatomical left, with space for the heart.','Gas exchange | Supports ventilation | Helps regulate acid–base balance','Pneumonia | Pulmonary embolism | Pleural effusion'),
+  part('heart','Heart','Cardiovascular','front',345,316,'right','A muscular pump in the chest, mainly behind the sternum and slightly left of centre.','Pumps blood to lungs | Supplies oxygenated blood to the body | Maintains circulation','Coronary artery disease | Heart failure | Arrhythmias'),
+  part('rib-cage','Rib cage','Musculoskeletal','front',278,336,'left','Ribs, sternum and thoracic vertebrae that surround the chest.','Protects heart and lungs | Supports breathing mechanics | Gives chest structure','Rib fractures | Costochondritis | Chest wall deformities'),
+  part('liver','Liver','Digestive','front',291,402,'left','A large organ in the upper right abdomen (viewer’s left).','Processes nutrients | Produces bile | Metabolises drugs and toxins','Hepatitis | Cirrhosis | Fatty liver disease'),
+  part('stomach','Stomach','Digestive','front',366,413,'right','A muscular organ in the upper left abdomen that receives food from the oesophagus.','Stores food temporarily | Mixes food with digestive juices | Begins protein digestion','Gastritis | Peptic ulcer disease | Gastric cancer'),
+  part('gallbladder','Gallbladder','Digestive','front',313,427,'left','A small sac beneath the liver.','Stores bile | Concentrates bile | Releases bile during digestion','Gallstones | Cholecystitis'),
+  part('spleen','Spleen','Immune','front',392,439,'right','A lymphatic organ high in the left abdomen.','Filters blood | Helps immune responses | Removes old blood cells','Splenomegaly | Splenic injury'),
+  part('pancreas','Pancreas','Digestive','front',344,453,'right','An organ behind the stomach with digestive and hormone-producing functions.','Releases digestive enzymes | Produces insulin and glucagon | Helps control blood glucose','Pancreatitis | Diabetes mellitus | Pancreatic cancer'),
+  part('right-kidney','Right kidney','Urinary','front',287,486,'left','One of two blood-filtering organs, located toward the back of the abdomen.','Filters waste from blood | Regulates fluid and electrolytes | Contributes to blood pressure control','Kidney stones | Chronic kidney disease | Pyelonephritis'),
+  part('left-kidney','Left kidney','Urinary','front',370,486,'right','The left kidney sits slightly higher than the right in most people.','Makes urine | Maintains acid–base balance | Produces hormones involved in red-cell production','Kidney stones | Kidney infection | Chronic kidney disease'),
+  part('large-intestine','Large intestine','Digestive','front',296,529,'left','The colon and rectum form the final major sections of the digestive tract.','Absorbs water and salts | Forms stool | Houses intestinal microorganisms','Colitis | Diverticular disease | Colorectal cancer'),
+  part('small-intestine','Small intestine','Digestive','front',338,546,'right','The long, folded intestine between the stomach and large intestine.','Digests food | Absorbs most nutrients | Moves contents by peristalsis','Coeliac disease | Crohn disease | Intestinal obstruction'),
+  part('appendix','Appendix','Digestive','front',283,574,'left','A narrow pouch extending from the caecum in the lower right abdomen.','Contains immune tissue | May support beneficial gut bacteria','Appendicitis | Appendiceal tumours'),
+  part('bladder','Urinary bladder','Urinary','front',326,613,'right','An expandable muscular organ in the pelvis that stores urine.','Stores urine | Contracts during urination','Urinary tract infection | Urinary retention | Bladder stones'),
+  part('uterus','Uterus','Reproductive','front',326,649,'right','A reproductive organ present in people with a uterus; positioned within the pelvis.','Supports pregnancy | Sheds uterine lining during menstruation | Contracts during childbirth','Fibroids | Endometriosis | Endometrial cancer'),
+  part('skin','Skin','Integumentary','front',239,277,'left','The body’s outer protective organ, made of multiple layers.','Forms a barrier | Supports temperature regulation | Provides touch sensation','Eczema | Psoriasis | Skin infections'),
+  part('shoulder','Shoulder joint','Musculoskeletal','front',232,245,'left','The shoulder region includes the glenohumeral joint and surrounding muscles.','Allows arm movement | Positions the hand | Supports lifting','Rotator cuff injury | Dislocation | Osteoarthritis'),
+  part('upper-arm','Upper arm','Musculoskeletal','front',217,344,'left','Region between shoulder and elbow, containing the humerus and major muscles.','Lifts and positions the arm | Supports elbow movement','Humerus fracture | Biceps tendon injury'),
+  part('elbow','Elbow joint','Musculoskeletal','front',205,425,'left','The joint joining the upper arm and forearm.','Flexes and extends the arm | Supports forearm rotation','Tennis elbow | Olecranon bursitis | Dislocation'),
+  part('forearm','Forearm','Musculoskeletal','front',192,488,'left','Region containing the radius, ulna, nerves and muscles.','Moves wrist and fingers | Rotates the palm','Fractures | Compartment syndrome | Tendinopathy'),
+  part('hand','Hand','Musculoskeletal','front',181,573,'left','Complex structure of bones, joints, tendons, muscles and nerves.','Fine motor control | Grip | Touch and manipulation','Carpal tunnel syndrome | Arthritis | Tendon injuries'),
+  part('pelvis','Pelvis','Musculoskeletal','front',359,667,'right','Bony ring connecting the trunk to the lower limbs.','Transfers body weight | Protects pelvic organs | Supports posture','Pelvic fractures | Hip arthritis'),
+  part('thigh','Thigh / femur','Musculoskeletal','front',282,742,'left','The upper leg region includes the femur, the body’s longest bone.','Supports weight-bearing | Powers walking and running','Femoral fractures | Muscle strains'),
+  part('knee','Knee joint','Musculoskeletal','front',365,827,'right','Large joint connecting the femur, tibia and patella.','Bends and straightens the leg | Absorbs forces | Supports walking','Osteoarthritis | Ligament injuries | Meniscal tears'),
+  part('lower-leg','Lower leg','Musculoskeletal','front',281,888,'left','Region between knee and ankle, containing tibia and fibula.','Transfers body weight | Supports walking and balance','Shin splints | Tibial fracture | Deep-vein thrombosis'),
+  part('foot','Foot / ankle','Musculoskeletal','front',376,972,'right','Weight-bearing complex of bones, joints, ligaments and muscles.','Balance | Shock absorption | Propulsion during walking','Ankle sprain | Plantar fasciitis | Fractures'),
+  part('cerebellum','Cerebellum','Nervous','back',327,137,'left','A structure at the rear of the brain below the cerebral hemispheres.','Coordinates movement | Supports balance | Contributes to motor learning','Cerebellar ataxia | Stroke'),
+  part('cervical-spine','Cervical spine','Musculoskeletal','back',326,207,'right','The seven vertebrae of the neck, supporting the head.','Protects spinal cord | Allows head movement | Supports posture','Cervical spondylosis | Disc herniation'),
+  part('trapezius','Trapezius muscle','Musculoskeletal','back',285,263,'left','Large superficial muscle of the upper back and neck.','Moves shoulder blades | Stabilises shoulders | Helps extend the neck','Muscle strain | Myofascial pain'),
+  part('scapula','Scapula','Musculoskeletal','back',373,321,'right','The shoulder blade, a flat triangular bone of the upper back.','Connects arm movement to trunk | Anchors muscles','Scapular fracture | Scapular dyskinesis'),
+  part('thoracic-spine','Thoracic spine','Musculoskeletal','back',327,354,'left','Twelve vertebrae forming the upper and middle back.','Supports the rib cage | Protects spinal cord | Enables trunk movement','Kyphosis | Compression fractures'),
+  part('spinal-cord','Spinal cord','Nervous','back',327,411,'right','Long bundle of nervous tissue within the vertebral canal.','Transmits nerve signals | Coordinates reflexes','Spinal cord injury | Transverse myelitis'),
+  part('lumbar-spine','Lumbar spine','Musculoskeletal','back',326,502,'left','Five large vertebrae of the lower back.','Supports upper-body weight | Allows bending and twisting','Low back pain | Lumbar disc herniation'),
+  part('back-right-kidney','Right kidney (posterior)','Urinary','back',286,484,'left','Right kidney viewed from behind; partly sheltered by the lower ribs.','Filters blood | Balances fluid and electrolytes','Kidney stones | Pyelonephritis'),
+  part('back-left-kidney','Left kidney (posterior)','Urinary','back',370,484,'right','Left kidney viewed from behind, typically slightly higher than the right.','Produces urine | Regulates blood chemistry','Chronic kidney disease | Kidney infection'),
+  part('gluteal','Gluteal muscles','Musculoskeletal','back',291,657,'left','Muscles around the buttocks and outer hip.','Extends and stabilises the hip | Supports standing and walking','Tendinopathy | Muscle strain'),
+  part('hamstrings','Hamstrings','Musculoskeletal','back',377,740,'right','Muscle group at the back of the thigh.','Bends the knee | Helps extend the hip','Hamstring strains | Tendinopathy'),
+  part('calf','Calf muscles','Musculoskeletal','back',281,867,'left','Gastrocnemius and soleus muscles at the back of the lower leg.','Pushes the foot downward | Helps walking and jumping','Calf strains | Muscle cramps'),
+  part('achilles','Achilles tendon','Musculoskeletal','back',372,935,'right','Strong tendon linking calf muscles to the heel bone.','Transfers calf force to the heel | Supports push-off','Achilles tendinopathy | Tendon rupture'),
+  part('heel','Heel / calcaneus','Musculoskeletal','back',284,977,'left','The calcaneus forms the rear of the foot.','Weight-bearing | Shock absorption | Tendon attachment','Heel fracture | Plantar fasciitis')
+];
+
+export const anatomySystems = ['All systems', ...new Set(anatomyParts.map(item => item.system))];
+export const defaultAnatomyContent = anatomyParts.map(({id,name,description,functions,conditions}) => ({id,name,description,functions,conditions}));
+export function anatomyCopy(partDefinition, entries) {
+  return { ...partDefinition, ...(entries?.find(item => item.id === partDefinition.id) || {}) };
+}

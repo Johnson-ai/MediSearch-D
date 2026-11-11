@@ -32,7 +32,7 @@ export default function Home() {
                 <span className="text-blue-400 text-glow">On Demand</span>
               </h1>
               <p className="text-slate-500 text-sm max-w-lg leading-relaxed">
-                Search any disease, condition, or clinical topic. Structured, evidence-based answers across seven clinical domains — built for final-year nursing practice.
+                Search any disease, condition, or clinical topic. AI-generated study answers across seven clinical domains. Verify details against established references before any clinical use.
               </p>
             </div>
             <div className="inline-flex items-center gap-3 glass border border-blue-900/30 rounded-xl px-4 py-3 mb-8">
@@ -40,7 +40,7 @@ export default function Home() {
               <div>
                 <div className="text-xs text-slate-500 font-mono uppercase tracking-widest">Prepared for</div>
                 <div className="text-sm text-white font-display font-semibold">Abigael Akossou</div>
-                <div className="text-[11px] text-slate-600 font-mono">Nursing Final Year · 2026</div>
+                <div className="text-[11px] text-slate-600 font-mono">Nursing study reference</div>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
                   <div className="font-mono text-blue-600 text-[10px] uppercase tracking-widest mb-0.5">{CLINICAL_CATEGORIES.find(c => c.id === activeCategory)?.short}</div>
                   <div className="text-white font-semibold text-sm">{CLINICAL_CATEGORIES.find(c => c.id === activeCategory)?.label}</div>
                 </div>
-                <div className="text-[10px] font-mono text-slate-700">MediSearch · Evidence-based</div>
+                <div className="text-[10px] font-mono text-slate-700">MediSearch · AI-generated study aid</div>
               </div>
               <div className="p-6"><ResultRenderer text={results} /></div>
             </div>

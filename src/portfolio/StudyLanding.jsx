@@ -1,0 +1,15 @@
+import { Link } from 'react-router-dom';
+import { usePortfolio } from './PortfolioContext';
+const blocks = [
+ {category:'01 / EXPLORE',title:'The human body',description:'Explore the new interactive anatomical atlas, body systems and clinical topics.',items:[['Interactive anatomy atlas','/study/anatomy'],['Body sciences','/study/body'],['Clinical search','/study/search'],['NANDA library','/study/nanda']]},
+ {category:'02 / PHARMACOLOGY',title:'Drug reference',description:'Learn about medicines, mechanisms and potential interactions.',items:[['Drug lookup','/study/drug-lookup'],['Drug interactions','/study/drug-interactions']]},
+ {category:'03 / EXAM PREPARATION',title:'Test your knowledge',description:'Practise questions, simulate examinations and review concepts.',items:[['Practice quiz','/study/quiz'],['Past questions','/study/past-questions'],['Mock exam','/study/mock-exam'],['Flashcards','/study/flashcards']]},
+ {category:'04 / CLINICAL TOOLS',title:'At the bedside',description:'Learning support for calculations, case work and nursing handovers.',items:[['Calculators','/study/calculators'],['Case studies','/study/case-studies'],['SBAR builder','/study/sbar'],['Vital signs','/study/vitals']]},
+ {category:'05 / QUICK REFERENCE',title:'The essentials',description:'Shortcuts for commonly revised clinical topics.',items:[['Lab values','/study/lab-values'],['Mnemonics','/study/mnemonics'],['About Study','/study/about']]},
+];
+export default function StudyLanding() {
+ const {portfolio} = usePortfolio(); const s=portfolio.study;
+ return <div className="study-landing"><section className="study-landing-hero"><div className="site-container"><div className="study-breadcrumb"><Link to="/">Portfolio</Link><span>/</span> Study</div><p className="section-kicker">{s.eyebrow}</p><h1>{s.title}</h1><p>{s.description}</p><div className="study-hero-buttons"><Link className="primary-button" to="/study/search">Start clinical search <span>→</span></Link><a href="#library" className="secondary-button">Browse all tools ↓</a></div></div><div className="study-hero-emblem" aria-hidden="true">+</div></section>
+ <div className="site-container study-disclaimer"><span className="disclaimer-dot">i</span><span><strong>Educational use only.</strong> AI output can be incorrect, incomplete or out of date. Check clinical decisions, medications, doses and calculations against current trusted references and qualified clinicians. Do not enter identifiable patient information.</span></div>
+ <section id="library" className="site-container study-catalog"><div className="study-catalog-heading"><span className="section-kicker">THE LIBRARY</span><h2>Everything in one place.</h2></div><div className="study-cards">{blocks.map((b,i)=><article key={b.title} className="study-catalog-card"><div className="study-card-number">{b.category}</div><h3>{b.title}</h3><p>{b.description}</p><div className="study-card-links">{b.items.map(([title,path])=><Link key={path} to={path}>{title}<span>↗</span></Link>)}</div></article>)}</div></section></div>;
+}

@@ -21,3 +21,17 @@ npm-debug.log*
 
 # OS
 .DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+
+# Dependencies and generated files
+node_modules/
+dist/
+
+# Private configuration
+.env
+.env.*
+!.env.example

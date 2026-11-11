@@ -1,18 +1,3 @@
-const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-
-// llama-3.1-8b-instant was deprecated by Groq on 08/16/26 — this is their
-// recommended replacement. If this one ever gets deprecated too, check
-// console.groq.com/docs/models for the current list.
-const MODEL = "openai/gpt-oss-20b";
-
-if (!API_KEY) {
-  console.warn(
-    "MediSearch: VITE_GROQ_API_KEY is missing. Set it in your .env " +
-    "(local) or Vercel Project Settings > Environment Variables (production)."
-  );
-}
-
 export const CLINICAL_CATEGORIES = [
   { id: "overview",   label: "Overview",         short: "OVR" },
   { id: "symptoms",   label: "Symptoms & Signs",  short: "SYM" },
@@ -145,46 +130,15 @@ Explain the pathophysiology of: "${q}"
 Sections: ## Normal Baseline Function, ## Initiating Event or Trigger, ## Cellular & Molecular Mechanisms of Injury, ## Cascade of Pathological Events (step by step), ## Compensatory Mechanisms, ## When Compensation Fails (decompensation), ## Organ & System Consequences, ## Clinical Manifestations Explained by Pathophysiology (link each sign/symptom to its mechanism), ## Nursing Implications.`,
 };
 
-async function callAI(prompt) {
-  if (!API_KEY) {
-    throw new Error(
-      "Missing API key. Add VITE_GROQ_API_KEY to your .env file (local) " +
-      "or Vercel Project Settings > Environment Variables (production), then redeploy."
-    );
-  }
-
-  const response = await fetch(GROQ_API, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      messages: [{ role: "user", content: prompt }],
-      max_tokens: 2000,
-      temperature: 0.3,
-    }),
+export async function callAI(prompt, maxTokens = 1800) {
+  const response = await fetch('/api/ai', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt, maxTokens }),
   });
-
-  if (!response.ok) {
-    let message = `API error ${response.status}`;
-    try {
-      const err = await response.json();
-      message = err?.error?.message || message;
-    } catch {
-      // response wasn't JSON; keep the generic message
-    }
-    if (response.status === 401) {
-      message = "Invalid or missing Groq API key. Check VITE_GROQ_API_KEY.";
-    } else if (response.status === 429) {
-      message = "Rate limit hit on the free tier. Wait a moment and try again.";
-    }
-    throw new Error(message);
-  }
-
-  const data = await response.json();
-  return data.choices?.[0]?.message?.content || "";
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || `Study AI unavailable (${response.status}).`);
+  return typeof data.text === 'string' ? data.text : '';
 }
 
 export async function fetchMedicalData(query, category, isBodyMode = false) {

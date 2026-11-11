@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { PAST_QUESTIONS } from "../data/pastQuestions";
+import { saveAttempt } from "../utils/studyProgress";
 
 const QUESTION_COUNT_OPTIONS = [30, 60, 90];
 const SECONDS_PER_QUESTION = 60; // 1 minute per question, standard NMCN pacing
@@ -29,6 +30,7 @@ export default function MockExam() {
   const [timeLeft, setTimeLeft] = useState(0);
   const [showNav, setShowNav] = useState(false);
   const intervalRef = useRef(null);
+  const savedRef = useRef(false);
 
   const maxAvailable = PAST_QUESTIONS.length;
 
@@ -40,6 +42,7 @@ export default function MockExam() {
     setFlagged({});
     setCurrentIndex(0);
     setTimeLeft(count * SECONDS_PER_QUESTION);
+    savedRef.current = false;
     setPhase("exam");
   };
 
@@ -112,6 +115,13 @@ export default function MockExam() {
       incorrectList,
     };
   }, [phase, examQuestions, userAnswers]);
+
+  useEffect(() => {
+    if (phase === 'results' && results && !savedRef.current) {
+      savedRef.current = true;
+      void saveAttempt('mock-exam', 'Timed mock examination', results.correct, results.total);
+    }
+  }, [phase, results]);
 
   const resetToSetup = () => {
     setPhase("setup");

@@ -1,4 +1,4 @@
-const CACHE = "medisearch-v1";
+const CACHE = "abigael-v3";
 const ASSETS = ["/", "/index.html"];
 
 self.addEventListener("install", e => {
@@ -15,7 +15,7 @@ self.addEventListener("activate", e => {
 
 self.addEventListener("fetch", e => {
   // Only cache GET requests, pass API calls straight through
-  if (e.request.method !== "GET" || e.request.url.includes("api.")) {
+  if (e.request.method !== "GET" || new URL(e.request.url).pathname.startsWith("/api/") || new URL(e.request.url).pathname.startsWith("/admin")) {
     return;
   }
   e.respondWith(

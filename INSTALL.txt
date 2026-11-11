@@ -1,0 +1,38 @@
+MEDISEARCH — AUTOMATIC GROQ FALLBACK PATCH
+
+This patch adds primary GPT-OSS 120B and automatic GPT-OSS 20B fallback.
+It only changes api/ai.js and adds tests/ai-fallback.test.mjs.
+No secret keys, database settings, website pages, or .git files are changed.
+
+1. Stop the site in Terminal with Control+C.
+2. From your existing MediSearch-D-main project folder, run:
+
+   unzip -o "$HOME/Downloads/MediSearch-Groq-Fallback-Patch.zip" -d .
+
+3. Open your existing .env.local:
+
+   open -e .env.local
+
+4. Make these two lines present (replace the old GROQ_MODEL line if present):
+
+   GROQ_MODEL=openai/gpt-oss-120b
+   GROQ_FALLBACK_MODEL=openai/gpt-oss-20b
+
+   Keep GROQ_API_KEY as it is. Do not add VITE_ to the API key.
+
+5. Save and run:
+
+   npm test
+   npm run build
+   npm run dev
+
+6. Visit http://127.0.0.1:5173/study/search and test a normal question.
+
+LIMITATIONS:
+- The backup activates only after a temporary provider error, missing model,
+  timeout, or empty provider response; it does not activate after invalid keys
+  or invalid requests.
+- If both models share an exhausted account quota, fallback will not help.
+- Vercel production needs matching GROQ_MODEL and GROQ_FALLBACK_MODEL variables
+  under Project Settings > Environment Variables, followed by redeployment.
+- This patch does not change billing, permissions, or account limits.

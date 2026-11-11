@@ -1,11 +1,11 @@
 {
-  "name": "MediSearch AI",
-  "short_name": "MediSearch",
-  "description": "Clinical intelligence engine for nursing students",
+  "name": "Abigael Akossou | Study",
+  "short_name": "Abigael",
+  "description": "Professional portfolio and nursing study library",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#020818",
-  "theme_color": "#071535",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "orientation": "portrait-primary",
   "icons": [
     {

@@ -42,7 +42,7 @@ export default function About() {
               Abigael<br />Akossou
             </h1>
             <p className="text-slate-400 text-base leading-relaxed max-w-xl mb-6">
-              This platform was built specifically for Abigael Akossou, a final-year nursing student preparing for her professional qualifying examinations in 2026.
+              This study library was originally prepared for Abigael Akossou to support nursing education and examination revision.
             </p>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xl mb-8">
               Every search category, every prompt, every drug class, and every quiz topic was selected and structured around the demands of a final-year nursing curriculum — from NANDA-I care plans to ADME pharmacokinetics to the Krebs cycle.
@@ -142,13 +142,13 @@ export default function About() {
         </div>
 
         <div className="text-center animate-slide-up">
-          <Link to="/" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-sm">
+          <Link to="/study" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-sm">
             Begin Searching
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
-          <p className="text-slate-700 text-[11px] font-mono mt-5">Abigael Akossou · Nursing Final Year · 2026</p>
+          <p className="text-slate-700 text-[11px] font-mono mt-5">Abigael Akossou · Nursing Study Library</p>
         </div>
       </div>
     </div>

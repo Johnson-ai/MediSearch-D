@@ -1,8 +1,7 @@
+import { callAI } from "../utils/api";
 import { useState } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 const QUICK_TOPICS = [
   "Hypertension","Diabetes Mellitus","Sepsis","Heart Failure",
@@ -30,14 +29,8 @@ export default function Flashcards() {
 Return ONLY valid JSON, no markdown:
 {"cards":[{"front":"Concise question or term (max 15 words)","back":"Complete clinical answer (2-4 sentences with specific values, mechanisms, or interventions)"}]}
 Cover: definitions, mechanisms, key values, drug doses, nursing interventions, clinical signs. Make them finals-level.`;
-      const res = await fetch(GROQ_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "llama-3.1-8b-instant", messages: [{ role: "user", content: prompt }], max_tokens: 1000, temperature: 0.4 }),
-      });
-      if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      const text = data.choices?.[0]?.message?.content || "";
+      const aiText = await callAI(prompt);
+      const text = aiText;
       const clean = text.replace(/```json|```/g, "").trim();
       const parsed = JSON.parse(clean);
       setCards(parsed.cards || []);

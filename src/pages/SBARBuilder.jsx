@@ -1,8 +1,7 @@
+import { callAI } from "../utils/api";
 import { useState } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 const SECTIONS = [
   {
@@ -67,19 +66,8 @@ Rewrite the following into a clear, concise, professional SBAR report. Keep ever
 
 ${raw}`;
 
-      const res = await fetch(GROQ_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({
-          model: "openai/gpt-oss-20b",
-          messages: [{ role: "user", content: prompt }],
-          max_tokens: 700,
-          temperature: 0.3,
-        }),
-      });
-      if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      setOutput(data.choices?.[0]?.message?.content || buildRawText(fields));
+      const aiText = await callAI(prompt);
+      setOutput(aiText || buildRawText(fields));
     } catch {
       setError("Couldn't reach the AI polish service. Your plain handoff is still available below.");
       setOutput(buildRawText(fields));

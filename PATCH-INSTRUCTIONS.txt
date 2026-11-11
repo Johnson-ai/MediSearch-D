@@ -1,0 +1,30 @@
+ABIGAEL CMS / CV LAYOUT UPDATE — DROP-IN PATCH
+================================================
+
+Changes:
+- Dedicated About page editor in the existing admin CMS; edits save to the same Supabase site JSON.
+- Admin sidebar stays put while the main editing panel scrolls independently.
+- /cv is now the full CV containing experience and education together.
+- Existing /experience and /education links redirect to those sections of /cv.
+- Navbar and homepage direct visitors to the combined CV.
+
+NO DATABASE MIGRATION OR NEW API KEYS ARE NEEDED.
+This patch does not include .git, .env, .env.local, node_modules, package.json or deployment config.
+
+ON YOUR MAC:
+1. Stop the local site in Terminal by pressing Control+C.
+2. Download Abigael-CMS-CV-Layout-Patch.zip to Downloads.
+3. In Terminal, run (while in your project's folder):
+
+   unzip -o "$HOME/Downloads/Abigael-CMS-CV-Layout-Patch.zip" -d .
+
+4. Then run:
+
+   npm test
+   npm run build
+   npm run dev
+
+5. Check http://127.0.0.1:5173/admin and http://127.0.0.1:5173/cv
+6. Once happy, run git status and commit/push in your existing Git repository.
+
+The unzip command replaces ONLY files present in the patch; it does NOT delete other source files and does NOT modify .git or local environment files. If your ZIP downloaded under another name or to a different folder, update that path.

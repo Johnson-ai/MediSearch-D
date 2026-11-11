@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// Bound inputs prevent division by zero, negative values, NaN/Infinity and implausible clinical readings.
+const within = (value, min, max) => value !== '' && value !== null && Number.isFinite(Number(value)) && Number(value) >= min && Number(value) <= max;
 const CALC_LIST = [
   { id: "drip",    label: "IV Drip Rate"         },
   { id: "dose",    label: "Drug Dose by Weight"   },
@@ -26,7 +28,7 @@ function Field({ label, value, onChange, placeholder, type = "number", unit }) {
   return (
     <div>
       <label className="text-[11px] font-mono text-slate-500 uppercase tracking-widest block mb-1">{label}{unit && <span className="ml-1 text-blue-700">({unit})</span>}</label>
-      <input type={type} value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder}
+      <input type={type} step={type === "number" ? "any" : undefined} min={type === "number" ? "0" : undefined} max={type === "number" ? "10000000" : undefined} value={value} onChange={e => { const v=e.target.value; if(type === "number" && v !== "" && (!Number.isFinite(Number(v)) || Number(v)<0 || Number(v)>10000000)) return; onChange(v); }} placeholder={placeholder}
         className="w-full glass border border-blue-900/30 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-blue-600/50 placeholder-slate-700" />
     </div>
   );
@@ -47,10 +49,11 @@ function Select({ label, value, onChange, options }) {
 // ── Individual Calculators ────────────────────────────────────────────────────
 function DripRate() {
   const [vol, setVol] = useState(""); const [hrs, setHrs] = useState(""); const [drop, setDrop] = useState("20");
-  const rate = vol && hrs ? ((parseFloat(vol) * parseFloat(drop)) / (parseFloat(hrs) * 60)).toFixed(0) : null;
-  const mlhr = vol && hrs ? (parseFloat(vol) / parseFloat(hrs)).toFixed(1) : null;
+  const rate = within(vol,1,100000) && within(hrs,0.05,240) ? ((Number(vol) * Number(drop)) / (Number(hrs) * 60)).toFixed(0) : null;
+  const mlhr = within(vol,1,100000) && within(hrs,0.05,240) ? (Number(vol) / Number(hrs)).toFixed(1) : null;
   return (
     <div className="space-y-4">
+      <p className="text-xs text-slate-500">Educational calculation only. Never use without an independent clinical check.</p>
       <Field label="Volume to infuse" unit="ml" value={vol} onChange={setVol} placeholder="e.g. 1000" />
       <Field label="Time" unit="hours" value={hrs} onChange={setHrs} placeholder="e.g. 8" />
       <Select label="Drop factor (drops/ml)" value={drop} onChange={setDrop} options={[{value:"10",label:"10 drops/ml (blood set)"},{value:"15",label:"15 drops/ml"},{value:"20",label:"20 drops/ml (standard)"},{value:"60",label:"60 drops/ml (micro/paediatric)"}]} />
@@ -62,8 +65,8 @@ function DripRate() {
 function DosageCalc() {
   const [ordered, setOrdered] = useState(""); const [weight, setWeight] = useState("");
   const [available, setAvailable] = useState(""); const [avVol, setAvVol] = useState("1");
-  const totalDose = ordered && weight ? (parseFloat(ordered) * parseFloat(weight)).toFixed(2) : null;
-  const volume = totalDose && available ? ((parseFloat(totalDose) / parseFloat(available)) * parseFloat(avVol)).toFixed(2) : null;
+  const totalDose = within(ordered,0.0001,1000) && within(weight,0.1,600) ? (Number(ordered) * Number(weight)).toFixed(2) : null;
+  const volume = totalDose && within(available,0.0001,100000) && within(avVol,0.0001,10000) ? ((Number(totalDose) / Number(available)) * Number(avVol)).toFixed(2) : null;
   return (
     <div className="space-y-4">
       <Field label="Ordered dose" unit="mg/kg" value={ordered} onChange={setOrdered} placeholder="e.g. 5" />
@@ -78,7 +81,7 @@ function DosageCalc() {
 
 function BMICalc() {
   const [weight, setWeight] = useState(""); const [height, setHeight] = useState("");
-  const bmi = weight && height ? (parseFloat(weight) / Math.pow(parseFloat(height) / 100, 2)).toFixed(1) : null;
+  const bmi = within(weight,1,600) && within(height,30,300) ? (Number(weight) / Math.pow(Number(height) / 100, 2)).toFixed(1) : null;
   const category = bmi ? bmi < 18.5 ? ["Underweight", "yellow"] : bmi < 25 ? ["Normal weight", "green"] : bmi < 30 ? ["Overweight", "yellow"] : ["Obese", "red"] : null;
   return (
     <div className="space-y-4">
@@ -92,7 +95,7 @@ function BMICalc() {
 function GFRCalc() {
   const [creat, setCreat] = useState(""); const [age, setAge] = useState(""); const [sex, setSex] = useState("male");
   let gfr = null;
-  if (creat && age) {
+  if (within(creat,10,3000) && within(age,18,120)) {
     const cr = parseFloat(creat) / 88.4;
     const kappa = sex === "female" ? 0.7 : 0.9;
     const alpha = sex === "female" ? -0.241 : -0.302;
@@ -113,8 +116,8 @@ function GFRCalc() {
 function FluidBalance() {
   const [inputs, setInputs] = useState({ oral: "", iv: "", other: "" });
   const [outputs, setOutputs] = useState({ urine: "", drain: "", vomit: "", other: "" });
-  const totalIn = Object.values(inputs).reduce((s, v) => s + (parseFloat(v) || 0), 0);
-  const totalOut = Object.values(outputs).reduce((s, v) => s + (parseFloat(v) || 0), 0);
+  const totalIn = Object.values(inputs).reduce((s, v) => s + (within(v,0,100000) ? Number(v) : 0), 0);
+  const totalOut = Object.values(outputs).reduce((s, v) => s + (within(v,0,100000) ? Number(v) : 0), 0);
   const balance = totalIn - totalOut;
   const F = (label, key, obj, setObj) => (
     <Field key={key} label={label} unit="ml" value={obj[key]} onChange={v => setObj(p => ({ ...p, [key]: v }))} placeholder="0" />
@@ -163,7 +166,7 @@ function ApgarScore() {
 
 function MAPCalc() {
   const [sys, setSys] = useState(""); const [dia, setDia] = useState("");
-  const map = sys && dia ? ((parseFloat(dia) * 2 + parseFloat(sys)) / 3).toFixed(1) : null;
+  const map = within(sys,30,320) && within(dia,20,240) && Number(sys)>Number(dia) ? ((Number(dia) * 2 + Number(sys)) / 3).toFixed(1) : null;
   const note = map ? `Normal MAP: 70–100 mmHg. ${parseFloat(map) < 65 ? "MAP <65 mmHg indicates inadequate organ perfusion — assess for shock." : parseFloat(map) > 110 ? "MAP >110 mmHg — hypertensive emergency risk." : "Adequate perfusion pressure."}` : null;
   return (
     <div className="space-y-4">
@@ -176,7 +179,7 @@ function MAPCalc() {
 
 function BSACalc() {
   const [weight, setWeight] = useState(""); const [height, setHeight] = useState("");
-  const bsa = weight && height ? Math.sqrt((parseFloat(weight) * parseFloat(height)) / 3600).toFixed(3) : null;
+  const bsa = within(weight,1,600) && within(height,30,300) ? Math.sqrt((Number(weight) * Number(height)) / 3600).toFixed(3) : null;
   return (
     <div className="space-y-4">
       <Field label="Weight" unit="kg" value={weight} onChange={setWeight} placeholder="e.g. 70" />
@@ -198,7 +201,7 @@ export default function Calculators() {
         <div className="mb-8 animate-slide-up">
           <div className="inline-block font-mono text-[11px] text-blue-600 border border-blue-900/50 rounded-full px-3 py-1 mb-4 tracking-widest uppercase">Clinical Tools</div>
           <h1 className="font-display text-4xl font-bold text-white mb-3">Clinical<br /><span className="text-blue-400 text-glow">Calculators</span></h1>
-          <p className="text-slate-500 text-sm max-w-lg leading-relaxed">Drug dosages, IV rates, fluid balance, Apgar scores and more. Evidence-based formulas for clinical and examination use.</p>
+          <p className="text-slate-500 text-sm max-w-lg leading-relaxed">Drug dosages, IV rates, fluid balance, Apgar scores and more. Standard formulas for educational use; independently verify before clinical application.</p>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-8 animate-slide-up stagger-2">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { fetchQuizQuestions, CLINICAL_SEARCHES, BODY_SEARCHES } from "../utils/api";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { saveAttempt } from "../utils/studyProgress";
 
 const ALL_TOPICS = [...CLINICAL_SEARCHES.slice(0, 10), ...BODY_SEARCHES.slice(0, 8),
   "Drug calculations","IV fluid therapy","Wound care","Infection control",
@@ -38,6 +39,7 @@ export default function Quiz() {
     let s = 0;
     questions.forEach((q, i) => { if (answers[i] === q.answer) s++; });
     setScore(s); setSubmitted(true);
+    void saveAttempt("quiz", topic, s, questions.length);
   };
 
   const getOptionClass = (qIndex, option) => {
@@ -123,7 +125,7 @@ export default function Quiz() {
                   <span className="text-slate-600 text-sm font-mono mb-1">{pct}%</span>
                 </div>
                 <div className="text-slate-400 text-sm">
-                  {pct === 100 ? "Perfect. Damilare Akossou is ready." :
+                  {pct === 100 ? "Excellent score. Review the explanations below." :
                    pct >= 80 ? "Strong result. Review explanations below." :
                    pct >= 60 ? "Passing standard. Focus on the missed questions." :
                    "Review this topic and attempt again."}

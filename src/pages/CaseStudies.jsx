@@ -1,9 +1,8 @@
+import { callAI } from "../utils/api";
 import { useState } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ResultRenderer from "../components/ResultRenderer";
 
-const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 const CASE_TOPICS = [
   "Acute MI","Septic Shock","Diabetic Ketoacidosis","Preeclampsia","Stroke",
@@ -57,14 +56,8 @@ Return ONLY valid JSON, no markdown:
   }
 }`;
 
-      const res = await fetch(GROQ_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "openai/gpt-oss-120b", messages: [{ role: "user", content: prompt }], max_tokens: 1500, temperature: 0.5 }),
-      });
-      if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      const text = data.choices?.[0]?.message?.content || "";
+      const aiText = await callAI(prompt);
+      const text = aiText;
       const clean = text.replace(/```json|```/g, "").trim();
       setCaseData(JSON.parse(clean));
     } catch {
@@ -90,13 +83,8 @@ Provide brief, constructive feedback:
 ## Mark: X/10
 
 Be encouraging but clinically accurate.`;
-      const res = await fetch(GROQ_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "openai/gpt-oss-20b", messages: [{ role: "user", content: prompt }], max_tokens: 600, temperature: 0.3 }),
-      });
-      const data = await res.json();
-      setFeedback(p => ({ ...p, [stageKey]: data.choices?.[0]?.message?.content || "" }));
+      const aiText = await callAI(prompt);
+      setFeedback(p => ({ ...p, [stageKey]: aiText }));
     } catch {
       setFeedback(p => ({ ...p, [stageKey]: "Unable to get feedback." }));
     }

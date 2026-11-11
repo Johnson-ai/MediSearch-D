@@ -1,9 +1,8 @@
+import { callAI } from "../utils/api";
 import { useState } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ResultRenderer from "../components/ResultRenderer";
 
-const GROQ_API = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 function VitalField({ label, value, onChange, placeholder, unit, normal }) {
   return (
@@ -70,14 +69,8 @@ Specific thresholds that require immediate medical review
 Be specific, clinical, and practical.`;
 
     try {
-      const res = await fetch(GROQ_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${API_KEY}` },
-        body: JSON.stringify({ model: "llama-3.1-8b-instant", messages: [{ role: "user", content: prompt }], max_tokens: 1500, temperature: 0.2 }),
-      });
-      if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      setResult(data.choices?.[0]?.message?.content || "");
+      const aiText = await callAI(prompt);
+      setResult(aiText);
     } catch {
       setError("Unable to interpret vitals. Please try again.");
     } finally {
